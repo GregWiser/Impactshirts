@@ -31,6 +31,18 @@ require( $template_directory . '/core/includes/version.php' );
 require( $template_directory . '/core/includes/upsell/theme-upsell.php' );
 require( $template_directory . '/core/includes/customizer.php' );
 
+
+require $template_directory . '/functions/theme-update-checker/theme-update-checker.php';
+$example_update_checker = new ThemeUpdateChecker(
+	'impactshirts',
+	'http://example.com/example-theme/info.json'
+);
+/*$className = PucFactory::getLatestClassVersion('PucGitHubChecker');
+$myUpdateChecker = new $className(
+	'https://github.com/GregWiser/Impactshirts/',
+	__FILE__,
+	'master'
+);*/
 // Return value of the supplied responsive free theme option.
 function responsive_free_get_option( $option, $default = false ) {
 	global $responsive_options;

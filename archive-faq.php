@@ -7,7 +7,7 @@ if( !defined( 'ABSPATH' ) ) {
  
 get_header(); ?>
 
-<div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>"><!-- single.php -->
+<div id="content" class="<?php echo implode( ' ', impactshirts_get_content_classes() ); ?>"><!-- single.php -->
 
 <?php get_template_part( 'loop-header' ); ?>
 <h2>Frequently Asked Questions</h2>

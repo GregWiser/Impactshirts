@@ -9,12 +9,12 @@ if( !defined( 'ABSPATH' ) ) {
  * Blog Template
  *
  * @file           home.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.1.0
- * @filesource     wp-content/themes/responsive/home.php
+ * @filesource     wp-content/themes/impactshirts/home.php
  * @link           http://codex.wordpress.org/Templates
  * @since          available since Release 1.0
  */
@@ -25,11 +25,11 @@ global $more;
 $more = 0;
 ?>
 
-	<div id="content-blog" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
+	<div id="content-blog" class="<?php echo implode( ' ', impactshirts_get_content_classes() ); ?>">
 
 		<!-- Blog page title -->
-		<?php if( responsive_free_get_option( 'blog_post_title_toggle' ) ) { ?>
-			<h1> <?php echo responsive_free_get_option( 'blog_post_title_text' ); ?> </h1>
+		<?php if( impactshirts_free_get_option( 'blog_post_title_toggle' ) ) { ?>
+			<h1> <?php echo impactshirts_free_get_option( 'blog_post_title_text' ); ?> </h1>
 		<?php } ?>
 
 		<?php get_template_part( 'loop-header' ); ?>
@@ -38,9 +38,9 @@ $more = 0;
 
 			<?php while( have_posts() ) : the_post(); ?>
 
-				<?php responsive_entry_before(); ?>
+				<?php impactshirts_entry_before(); ?>
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php responsive_entry_top(); ?>
+					<?php impactshirts_entry_top(); ?>
 
 					<?php get_template_part( 'post-meta' ); ?>
                     
@@ -50,16 +50,16 @@ $more = 0;
 								<?php the_post_thumbnail(); ?>
 							</a>
 						<?php endif; ?>
-						<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
+						<?php the_content( __( 'Read more &#8250;', 'impactshirts' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'impactshirts' ), 'after' => '</div>' ) ); ?>
 					</div>
 					<!-- end of .post-entry -->
 
 					<?php get_template_part( 'post-data' ); ?>
 
-					<?php responsive_entry_bottom(); ?>
+					<?php impactshirts_entry_bottom(); ?>
 				</div><!-- end of #post-<?php the_ID(); ?> -->
-				<?php responsive_entry_after(); ?>
+				<?php impactshirts_entry_after(); ?>
 
 			<?php
 			endwhile;

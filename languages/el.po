@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Responsive Theme\n"
+"Project-Id-Version: Impactshirts Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-25 13:42:58 UTC\n"
 "PO-Revision-Date: 2013-03-13 23:03+0100\n"
@@ -83,12 +83,12 @@ msgid "&uarr;"
 msgstr "&uarr;"
 
 #: footer.php
-msgid "http://themeid.com/responsive-theme/"
-msgstr "http://themeid.com/responsive-theme/"
+msgid "http://themeid.com/impactshirts-theme/"
+msgstr "http://themeid.com/impactshirts-theme/"
 
 #: footer.php
-msgid "Responsive Theme"
-msgstr "Responsive Theme"
+msgid "Impactshirts Theme"
+msgstr "Impactshirts Theme"
 
 #: footer.php
 msgid "powered by"

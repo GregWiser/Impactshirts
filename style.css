@@ -1,6 +1,6 @@
 ﻿/* 
 Theme Name: Impact Shirts
-Version: 1.0.0
+Version: 0.0.1
 Author: Wiser Sites
 Author URI: http://wisersites.com
 */
@@ -1746,7 +1746,7 @@ a.returnHomepage {
     body {}
 }
 
-/* =Responsive (Mobile) Design
+/* =Impactshirts (Mobile) Design
 -------------------------------------------------------------- */
 @media screen and (max-width: 1288px) { 
     .home-slider{
@@ -1963,7 +1963,7 @@ a.returnHomepage {
     #searchform input#s {
         width: 51%;
     }
-/*    .js .main-nav a#responsive_menu_button{
+/*    .js .main-nav a#impactshirts_menu_button{
     display: block;
 }
 .js .main-nav .menu {
@@ -2011,7 +2011,7 @@ a.returnHomepage {
     #nav-wrapper>.nav-sub-wrapper{
         padding: 0 !important;
     }
-	#responsive_current_menu_item {
+	#impactshirts_current_menu_item {
 		line-height:40px;
 		font-size:150%;	
 	}
@@ -2022,7 +2022,7 @@ a.returnHomepage {
 	.js .main-nav {
 		height:50px;	
 	}
-	.js .main-nav a#responsive_menu_button {
+	.js .main-nav a#impactshirts_menu_button {
 		height:40px;
 		background-position:0px 15px;	
 		margin-left:-45px;

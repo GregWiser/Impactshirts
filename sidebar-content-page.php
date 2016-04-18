@@ -11,12 +11,12 @@ if ( !defined( 'ABSPATH' ) ) {
 Template Name:  Sidebar/Content
  *
  * @file           sidebar-content-page.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/sidebar-content-page.php
+ * @filesource     wp-content/themes/impactshirts/sidebar-content-page.php
  * @link           http://codex.wordpress.org/Theme_Development#Pages_.28page.php.29
  * @since          available since Release 1.0
  */
@@ -29,49 +29,49 @@ Template Name:  Sidebar/Content
 
 		<?php while( have_posts() ) : the_post(); ?>
 
-			<?php get_responsive_breadcrumb_lists(); ?>
+			<?php get_impactshirts_breadcrumb_lists(); ?>
 
-			<?php responsive_entry_before(); ?>
+			<?php impactshirts_entry_before(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php responsive_entry_top(); ?>
+				<?php impactshirts_entry_top(); ?>
 
 				<h1 class="post-title"><?php the_title(); ?></h1>
 
 				<?php if ( comments_open() ) : ?>
 					<div class="post-meta">
-						<?php responsive_post_meta_data(); ?>
+						<?php impactshirts_post_meta_data(); ?>
 
 						<?php if ( comments_open() ) : ?>
 							<span class="comments-link">
                         <span class="mdash">&mdash;</span>
-								<?php comments_popup_link( __( 'No Comments &darr;', 'responsive' ), __( '1 Comment &darr;', 'responsive' ), __( '% Comments &darr;', 'responsive' ) ); ?>
+								<?php comments_popup_link( __( 'No Comments &darr;', 'impactshirts' ), __( '1 Comment &darr;', 'impactshirts' ), __( '% Comments &darr;', 'impactshirts' ) ); ?>
                         </span>
 						<?php endif; ?>
 					</div><!-- end of .post-meta -->
 				<?php endif; ?>
 
 				<div class="post-entry">
-					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
+					<?php the_content( __( 'Read more &#8250;', 'impactshirts' ) ); ?>
+					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'impactshirts' ), 'after' => '</div>' ) ); ?>
 				</div>
 				<!-- end of .post-entry -->
 
 				<?php if ( comments_open() ) : ?>
 					<div class="post-data">
-						<?php the_tags( __( 'Tagged with:', 'responsive' ) . ' ', ', ', '<br />' ); ?>
-						<?php the_category( __( 'Posted in %s', 'responsive' ) . ', ' ); ?>
+						<?php the_tags( __( 'Tagged with:', 'impactshirts' ) . ' ', ', ', '<br />' ); ?>
+						<?php the_category( __( 'Posted in %s', 'impactshirts' ) . ', ' ); ?>
 					</div><!-- end of .post-data -->
 				<?php endif; ?>
 
-				<div class="post-edit"><?php edit_post_link( __( 'Edit', 'responsive' ) ); ?></div>
+				<div class="post-edit"><?php edit_post_link( __( 'Edit', 'impactshirts' ) ); ?></div>
 
-				<?php responsive_entry_bottom(); ?>
+				<?php impactshirts_entry_bottom(); ?>
 			</div><!-- end of #post-<?php the_ID(); ?> -->
-			<?php responsive_entry_after(); ?>
+			<?php impactshirts_entry_after(); ?>
 
-			<?php responsive_comments_before(); ?>
+			<?php impactshirts_comments_before(); ?>
 			<?php comments_template( '', true ); ?>
-			<?php responsive_comments_after(); ?>
+			<?php impactshirts_comments_after(); ?>
 
 		<?php
 		endwhile;

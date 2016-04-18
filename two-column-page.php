@@ -32,27 +32,27 @@ get_header(); ?>
 
 			<?php get_template_part( 'loop-header' ); ?>
 
-			<?php responsive_entry_before(); ?>
+			<?php impactshirts_entry_before(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php responsive_entry_top(); ?>
+				<?php impactshirts_entry_top(); ?>
 
 				<?php get_template_part( 'post-meta-page' ); ?>
 
 				<div class="post-entry">
-					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
+					<?php the_content( __( 'Read more &#8250;', 'impactshirts' ) ); ?>
+					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'impactshirts' ), 'after' => '</div>' ) ); ?>
 				</div>
 				<!-- end of .post-entry -->
 
 				<?php get_template_part( 'post-data' ); ?>
 
-				<?php responsive_entry_bottom(); ?>
+				<?php impactshirts_entry_bottom(); ?>
 			</div><!-- end of #post-<?php the_ID(); ?> -->
-			<?php responsive_entry_after(); ?>
+			<?php impactshirts_entry_after(); ?>
 
-			<?php responsive_comments_before(); ?>
+			<?php impactshirts_comments_before(); ?>
 			<?php comments_template( '', true ); ?>
-			<?php responsive_comments_after(); ?>
+			<?php impactshirts_comments_after(); ?>
 
 		<?php
 		endwhile;

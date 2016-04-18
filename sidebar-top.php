@@ -6,7 +6,7 @@ if( !defined( 'ABSPATH' ) ) {
 }
 $data = get_option('impact-options');
 
-responsive_widgets_before(); // above widgets container hook ?>
+impactshirts_widgets_before(); // above widgets container hook ?>
 	<div id="top-widget" class="top-widget">
 		<div class="caps">
 			<div class="phoneDescription">talk to a real person</div>
@@ -18,4 +18,4 @@ responsive_widgets_before(); // above widgets container hook ?>
 			monday-friday</div>
 		</div>
 	</div><!-- end of #top-widget -->
-<?php responsive_widgets_after(); // after widgets container hook ?>
+<?php impactshirts_widgets_after(); // after widgets container hook ?>

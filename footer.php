@@ -10,12 +10,12 @@ if( !defined( 'ABSPATH' ) ) {
  *
  *
  * @file           footer.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.2
- * @filesource     wp-content/themes/responsive/footer.php
+ * @filesource     wp-content/themes/impactshirts/footer.php
  * @link           http://codex.wordpress.org/Theme_Development#Footer_.28footer.php.29
  * @since          available since Release 1.0
  */
@@ -23,14 +23,14 @@ if( !defined( 'ABSPATH' ) ) {
 /*
  * Globalize Theme options
  */
-global $responsive_options;
-$responsive_options = responsive_get_options();
+global $impactshirts_options;
+$impactshirts_options = impactshirts_get_options();
 ?>
-<?php responsive_wrapper_bottom(); // after wrapper content hook ?>
+<?php impactshirts_wrapper_bottom(); // after wrapper content hook ?>
 </div><!-- end of #wrapper -->
-<?php responsive_wrapper_end(); // after wrapper hook ?>
+<?php impactshirts_wrapper_end(); // after wrapper hook ?>
 </div><!-- end of #container -->
-<?php responsive_container_end(); // after container hook ?>
+<?php impactshirts_container_end(); // after container hook ?>
 
 <!--<div id="footer-masthead-wrapper">
 	<div id="footer-masthead">
@@ -75,12 +75,12 @@ $responsive_options = responsive_get_options();
 <!--    </div>
 </div>-->
 <div id="footer" class="clearfix">
-	<?php responsive_footer_top(); ?>
+	<?php impactshirts_footer_top(); ?>
 	<div id="footer-wrapper">
 
 		<div class="grid col-940">
 			<div class="grid col-460">
-			<?php if( has_nav_menu( 'footer-menu', 'responsive' ) ) { ?>
+			<?php if( has_nav_menu( 'footer-menu', 'impactshirts' ) ) { ?>
 				<div class="widget-title"><h3>Important Links</h3></div>
 					<?php wp_nav_menu( array(
 							'container'      => '',
@@ -130,7 +130,7 @@ $responsive_options = responsive_get_options();
 			<!-- end of col-540 -->
 
 			<div class="grid col-380 fit">
-				<?php echo responsive_get_social_icons() ?>
+				<?php echo impactshirts_get_social_icons() ?>
 			</div>
 			<!-- end of col-380 fit -->
 
@@ -139,11 +139,11 @@ $responsive_options = responsive_get_options();
 		<?php get_sidebar( 'colophon' ); ?>
 
 		<div class="grid col-300 copyright">
-			<?php esc_attr_e( '&copy;', 'responsive' ); ?> <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>
+			<?php esc_attr_e( '&copy;', 'impactshirts' ); ?> <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>
 		</div>
 		<!-- end of .copyright -->
 
-		<!--<div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php // esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php // _e( '&uarr;', 'responsive' ); ?></a></div>-->
+		<!--<div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php // esc_attr_e( 'scroll to top', 'impactshirts' ); ?>"><?php // _e( '&uarr;', 'impactshirts' ); ?></a></div>-->
 
 		<div class="grid col-300 fit powered">
 				An Impact Shirts Production
@@ -153,9 +153,9 @@ $responsive_options = responsive_get_options();
 	</div>
 	<!-- end #footer-wrapper -->
 
-	<?php responsive_footer_bottom(); ?>
+	<?php impactshirts_footer_bottom(); ?>
 </div><!-- end #footer -->
-<?php responsive_footer_after(); ?>
+<?php impactshirts_footer_after(); ?>
 
 <?php wp_footer(); ?>
 <?php

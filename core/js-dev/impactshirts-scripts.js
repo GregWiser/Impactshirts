@@ -1,4 +1,4 @@
-/*! Responsive JS Library v1.2.2 */
+/*! Impactshirts JS Library v1.2.2 */
 
 /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
 /*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
@@ -471,15 +471,15 @@ jQuery(document).ready(function ($) {
 		}
 	}
 	;
-	$('.main-nav').append('<a id="responsive_menu_button"></a>');
-	$('.main-nav').prepend('<div id="responsive_current_menu_item">' + current + '</div>');
-	$('a#responsive_menu_button, #responsive_current_menu_item').click(function () {
+	$('.main-nav').append('<a id="impactshirts_menu_button"></a>');
+	$('.main-nav').prepend('<div id="impactshirts_current_menu_item">' + current + '</div>');
+	$('a#impactshirts_menu_button, #impactshirts_current_menu_item').click(function () {
 		$('.js .main-nav .menu').slideToggle(function () {
 			if ($(this).is(':visible')) {
-				$('a#responsive_menu_button').addClass('responsive-toggle-open');
+				$('a#impactshirts_menu_button').addClass('impactshirts-toggle-open');
 			}
 			else {
-				$('a#responsive_menu_button').removeClass('responsive-toggle-open');
+				$('a#impactshirts_menu_button').removeClass('impactshirts-toggle-open');
 				$('.js .main-nav .menu').removeAttr('style');
 			}
 		});
@@ -491,9 +491,9 @@ jQuery(document).ready(function ($) {
 	$('html').click(function () {
 
 		// Check if the menu is open, close in that case.
-		if ($('a#responsive_menu_button').hasClass('responsive-toggle-open')) {
+		if ($('a#impactshirts_menu_button').hasClass('impactshirts-toggle-open')) {
 			$('.js .main-nav .menu').slideToggle(function () {
-				$('a#responsive_menu_button').removeClass('responsive-toggle-open');
+				$('a#impactshirts_menu_button').removeClass('impactshirts-toggle-open');
 				$('.js .main-nav .menu').removeAttr('style');
 			});
 		}

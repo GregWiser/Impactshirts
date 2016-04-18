@@ -11,12 +11,12 @@ if ( !defined( 'ABSPATH' ) ) {
 Template Name:  Landing Page (no menu)
  *
  * @file           landing-page.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/landing-page.php
+ * @filesource     wp-content/themes/impactshirts/landing-page.php
  * @link           http://codex.wordpress.org/Theme_Development#Pages_.28page.php.29
  * @since          available since Release 1.0
  */
@@ -29,22 +29,22 @@ get_header(); ?>
 
 		<?php while( have_posts() ) : the_post(); ?>
 
-			<?php responsive_entry_before(); ?>
+			<?php impactshirts_entry_before(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php responsive_entry_top(); ?>
+				<?php impactshirts_entry_top(); ?>
 
 				<h1 class="post-title"><?php the_title(); ?></h1>
 
 				<div class="post-entry">
-					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
+					<?php the_content( __( 'Read more &#8250;', 'impactshirts' ) ); ?>
+					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'impactshirts' ), 'after' => '</div>' ) ); ?>
 				</div><!-- end of .post-entry -->
 
 				<?php get_template_part( 'post-data', get_post_type() ); ?>
 
-				<?php responsive_entry_bottom(); ?>
+				<?php impactshirts_entry_bottom(); ?>
 			</div><!-- end of #post-<?php the_ID(); ?> -->
-			<?php responsive_entry_after(); ?>
+			<?php impactshirts_entry_after(); ?>
 
 		<?php
 		endwhile;

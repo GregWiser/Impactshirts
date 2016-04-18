@@ -10,12 +10,12 @@ if( !defined( 'ABSPATH' ) ) {
  *
  *
  * @file           sidebar.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/sidebar.php
+ * @filesource     wp-content/themes/impactshirts/sidebar.php
  * @link           http://codex.wordpress.org/Theme_Development#Widgets_.28sidebar.php.29
  * @since          available since Release 1.0
  */
@@ -23,7 +23,7 @@ if( !defined( 'ABSPATH' ) ) {
 /*
  * Load the correct sidebar according to the page layout
  */
-$layout = responsive_get_layout();
+$layout = impactshirts_get_layout();
 switch ( $layout ) {
 	case 'sidebar-content-page':
 		get_sidebar( 'left' );

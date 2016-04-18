@@ -114,7 +114,7 @@ acf_add_local_field_group(array (
 						'id' => '',
 					),
 					'return_format' => 'array',
-					'preview_size' => 'responsive-150',
+					'preview_size' => 'impactshirts-150',
 					'library' => 'all',
 					'min_width' => '',
 					'min_height' => '',

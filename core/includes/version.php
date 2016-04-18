@@ -11,45 +11,45 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * @file           version.php
  * @package        WordPress
- * @subpackage     Responsive
+ * @subpackage     Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.2
- * @filesource     wp-content/themes/responsive/includes/version.php
+ * @filesource     wp-content/themes/impactshirts/includes/version.php
  * @link           N/A
  * @since          available since Release 1.0
  */
 ?>
 <?php
-function responsive_template_data() {
+function impactshirts_template_data() {
 	echo '<!-- We need this for debugging -->' . "\n";
-	echo '<!-- ' . get_responsive_template_name() . ' ' . get_responsive_template_version() . ' -->' . "\n";
+	echo '<!-- ' . get_impactshirts_template_name() . ' ' . get_impactshirts_template_version() . ' -->' . "\n";
 }
 
-add_action( 'wp_head', 'responsive_template_data' );
+add_action( 'wp_head', 'impactshirts_template_data' );
 
-function responsive_theme_data() {
+function impactshirts_theme_data() {
 	if ( is_child_theme() ) {
-		echo '<!-- ' . get_responsive_theme_name() . ' ' . get_responsive_theme_version() . ' -->' . "\n";
+		echo '<!-- ' . get_impactshirts_theme_name() . ' ' . get_impactshirts_theme_version() . ' -->' . "\n";
 	}
 }
 
-add_action( 'wp_head', 'responsive_theme_data' );
+add_action( 'wp_head', 'impactshirts_theme_data' );
 
-function get_responsive_theme_name() {
+function get_impactshirts_theme_name() {
 	$theme = wp_get_theme();
 
 	return $theme->Name;
 }
 
-function get_responsive_theme_version() {
+function get_impactshirts_theme_version() {
 	$theme = wp_get_theme();
 
 	return $theme->Version;
 }
 
-function get_responsive_template_name() {
+function get_impactshirts_template_name() {
 	$theme  = wp_get_theme();
 	$parent = $theme->parent();
 	if ( $parent ) {
@@ -59,7 +59,7 @@ function get_responsive_template_name() {
 	return $theme->Name;
 }
 
-function get_responsive_template_version() {
+function get_impactshirts_template_version() {
 	$theme  = wp_get_theme();
 	$parent = $theme->parent();
 	if ( $parent ) {

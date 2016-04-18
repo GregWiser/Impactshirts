@@ -10,10 +10,10 @@ if ( !defined( 'ABSPATH' ) ) {
  * Load the plugin from the plugin that is installed.
  *
  */
-function get_responsive_breadcrumb_lists() {
-	$responsive_options = get_option( 'responsive_theme_options' );
+function get_impactshirts_breadcrumb_lists() {
+	$impactshirts_options = get_option( 'impactshirts_theme_options' );
 	$yoast_options = get_option( 'wpseo_internallinks' );
-	if ( 1 == $responsive_options['breadcrumb'] ) {
+	if ( 1 == $impactshirts_options['breadcrumb'] ) {
 		return;
 	} elseif ( function_exists( 'bcn_display' ) ) {
 		echo '<span class="breadcrumb" typeof="v:Breadcrumb">';
@@ -24,7 +24,7 @@ function get_responsive_breadcrumb_lists() {
 	} elseif ( function_exists( 'yoast_breadcrumb' ) && true === $yoast_options['breadcrumbs-enable'] ) {
 		yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
 	} elseif ( ! is_search() ) {
-		responsive_breadcrumb_lists();
+		impactshirts_breadcrumb_lists();
 	}
 
 }
@@ -36,17 +36,17 @@ function get_responsive_breadcrumb_lists() {
  * Adopted from Dimox
  *
  */
-if ( !function_exists( 'responsive_breadcrumb_lists' ) ) {
+if ( !function_exists( 'impactshirts_breadcrumb_lists' ) ) {
 
-	function responsive_breadcrumb_lists() {
+	function impactshirts_breadcrumb_lists() {
 
 		/* === OPTIONS === */
-		$text['home']     = __( 'Home', 'responsive' ); // text for the 'Home' link
-		$text['category'] = __( 'Archive for %s', 'responsive' ); // text for a category page
-		$text['search']   = __( 'Search results for: %s', 'responsive' ); // text for a search results page
-		$text['tag']      = __( 'Posts tagged %s', 'responsive' ); // text for a tag page
-		$text['author']   = __( 'View all posts by %s', 'responsive' ); // text for an author page
-		$text['404']      = __( 'Error 404', 'responsive' ); // text for the 404 page
+		$text['home']     = __( 'Home', 'impactshirts' ); // text for the 'Home' link
+		$text['category'] = __( 'Archive for %s', 'impactshirts' ); // text for a category page
+		$text['search']   = __( 'Search results for: %s', 'impactshirts' ); // text for a search results page
+		$text['tag']      = __( 'Posts tagged %s', 'impactshirts' ); // text for a tag page
+		$text['author']   = __( 'View all posts by %s', 'impactshirts' ); // text for an author page
+		$text['404']      = __( 'Error 404', 'impactshirts' ); // text for the 404 page
 
 		$show['current'] = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
 		$show['home']    = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
@@ -190,7 +190,7 @@ if ( !function_exists( 'responsive_breadcrumb_lists' ) ) {
 
 			if ( get_query_var( 'paged' ) || get_query_var( 'page' ) ) {
 				$page_num = get_query_var( 'page' ) ? get_query_var( 'page' ) : get_query_var( 'paged' );
-				$html_output .= $delimiter . sprintf( __( 'Page %s', 'responsive' ), $page_num );
+				$html_output .= $delimiter . sprintf( __( 'Page %s', 'impactshirts' ), $page_num );
 
 			}
 
@@ -200,7 +200,7 @@ if ( !function_exists( 'responsive_breadcrumb_lists' ) ) {
 
 		echo $html_output;
 
-	} // end responsive_breadcrumb_lists
+	} // end impactshirts_breadcrumb_lists
 
 }
 
@@ -209,11 +209,11 @@ if ( !function_exists( 'responsive_breadcrumb_lists' ) ) {
  * Allows user input in the post gallery shortcode.
  *
  */
-function responsive_gallery_atts( $out, $pairs, $atts ) {
+function impactshirts_gallery_atts( $out, $pairs, $atts ) {
 
 	$full_width = is_page_template( 'full-width-page.php' ) || is_page_template( 'landing-page.php' );
 
-	// Check if the size attribute has been set, if so use it and skip the responsive sizes
+	// Check if the size attribute has been set, if so use it and skip the impactshirts sizes
 	if ( array_key_exists( 'size', $atts ) ) {
 		$size = $atts['size'];
 	} else {
@@ -221,61 +221,61 @@ function responsive_gallery_atts( $out, $pairs, $atts ) {
 		if ( $full_width ) {
 			switch ( $out['columns'] ) {
 				case 1:
-					$size = 'responsive-900'; //900
+					$size = 'impactshirts-900'; //900
 					break;
 				case 2:
-					$size = 'responsive-450'; //450
+					$size = 'impactshirts-450'; //450
 					break;
 				case 3:
-					$size = 'responsive-300'; //300
+					$size = 'impactshirts-300'; //300
 					break;
 				case 4:
-					$size = 'responsive-200'; //225
+					$size = 'impactshirts-200'; //225
 					break;
 				case 5:
-					$size = 'responsive-200'; //180
+					$size = 'impactshirts-200'; //180
 					break;
 				case 6:
-					$size = 'responsive-150'; //150
+					$size = 'impactshirts-150'; //150
 					break;
 				case 7:
-					$size = 'responsive-150'; //125
+					$size = 'impactshirts-150'; //125
 					break;
 				case 8:
-					$size = 'responsive-150'; //112
+					$size = 'impactshirts-150'; //112
 					break;
 				case 9:
-					$size = 'responsive-100'; //100
+					$size = 'impactshirts-100'; //100
 					break;
 			}
 		} else {
 			switch ( $out['columns'] ) {
 				case 1:
-					$size = 'responsive-600'; //600
+					$size = 'impactshirts-600'; //600
 					break;
 				case 2:
-					$size = 'responsive-300'; //300
+					$size = 'impactshirts-300'; //300
 					break;
 				case 3:
-					$size = 'responsive-200'; //200
+					$size = 'impactshirts-200'; //200
 					break;
 				case 4:
-					$size = 'responsive-150'; //150
+					$size = 'impactshirts-150'; //150
 					break;
 				case 5:
-					$size = 'responsive-150'; //120
+					$size = 'impactshirts-150'; //120
 					break;
 				case 6:
-					$size = 'responsive-100'; //100
+					$size = 'impactshirts-100'; //100
 					break;
 				case 7:
-					$size = 'responsive-100'; //85
+					$size = 'impactshirts-100'; //85
 					break;
 				case 8:
-					$size = 'responsive-100'; //75
+					$size = 'impactshirts-100'; //75
 					break;
 				case 9:
-					$size = 'responsive-100'; //66
+					$size = 'impactshirts-100'; //66
 					break;
 			}
 		}
@@ -295,49 +295,49 @@ function responsive_gallery_atts( $out, $pairs, $atts ) {
 
 }
 
-add_filter( 'shortcode_atts_gallery', 'responsive_gallery_atts', 10, 3 );
+add_filter( 'shortcode_atts_gallery', 'impactshirts_gallery_atts', 10, 3 );
 
 /*
  * Create image sizes for the galley
  */
-function responsive_add_image_size() {
-	add_image_size( 'responsive-100', 100, 9999 );
-	add_image_size( 'responsive-150', 150, 9999 );
-	add_image_size( 'responsive-200', 200, 9999 );
-	add_image_size( 'responsive-300', 300, 9999 );
-	add_image_size( 'responsive-450', 450, 9999 );
-	add_image_size( 'responsive-600', 600, 9999 );
-	add_image_size( 'responsive-900', 900, 9999 );
+function impactshirts_add_image_size() {
+	add_image_size( 'impactshirts-100', 100, 9999 );
+	add_image_size( 'impactshirts-150', 150, 9999 );
+	add_image_size( 'impactshirts-200', 200, 9999 );
+	add_image_size( 'impactshirts-300', 300, 9999 );
+	add_image_size( 'impactshirts-450', 450, 9999 );
+	add_image_size( 'impactshirts-600', 600, 9999 );
+	add_image_size( 'impactshirts-900', 900, 9999 );
 }
-add_action( 'after_setup_theme', 'responsive_add_image_size' );
+add_action( 'after_setup_theme', 'impactshirts_add_image_size' );
 /*
  * Get social icons.
  *
  * @since    1.9.4.9
  */
-function responsive_get_social_icons() {
+function impactshirts_get_social_icons() {
 
-	$responsive_options = responsive_get_options();
+	$impactshirts_options = impactshirts_get_options();
 
 	$sites = array (
-		'twitter'     => __( 'Twitter', 'responsive' ),
-		'facebook'    => __( 'Facebook', 'responsive' ),
-		'linkedin'    => __( 'LinkedIn', 'responsive' ),
-		'youtube'     => __( 'YouTube', 'responsive' ),
-		'stumbleupon' => __( 'StumbleUpon', 'responsive' ),
-		'rss'         => __( 'RSS Feed', 'responsive' ),
-		'googleplus'  => __( 'Google+', 'responsive' ),
-		'instagram'   => __( 'Instagram', 'responsive' ),
-		'pinterest'   => __( 'Pinterest', 'responsive' ),
-		'yelp'        => __( 'Yelp!', 'responsive' ),
-		'vimeo'       => __( 'Vimeo', 'responsive' ),
-		'foursquare'  => __( 'foursquare', 'responsive' ),
+		'twitter'     => __( 'Twitter', 'impactshirts' ),
+		'facebook'    => __( 'Facebook', 'impactshirts' ),
+		'linkedin'    => __( 'LinkedIn', 'impactshirts' ),
+		'youtube'     => __( 'YouTube', 'impactshirts' ),
+		'stumbleupon' => __( 'StumbleUpon', 'impactshirts' ),
+		'rss'         => __( 'RSS Feed', 'impactshirts' ),
+		'googleplus'  => __( 'Google+', 'impactshirts' ),
+		'instagram'   => __( 'Instagram', 'impactshirts' ),
+		'pinterest'   => __( 'Pinterest', 'impactshirts' ),
+		'yelp'        => __( 'Yelp!', 'impactshirts' ),
+		'vimeo'       => __( 'Vimeo', 'impactshirts' ),
+		'foursquare'  => __( 'foursquare', 'impactshirts' ),
 	);
 
 	$html = '<ul class="social-icons">';
 	foreach( $sites as $key => $value ) {
-		if ( !empty( $responsive_options[$key . '_uid'] ) ) {
-			$html .= '<li class="' . esc_attr( $key ) . '-icon"><a href="' . $responsive_options[$key . '_uid'] . '">' . '<img src="' . responsive_child_uri( '/core/icons/' . esc_attr( $key ) . '-icon.png' ) . '" width="24" height="24" alt="' . esc_html( $value ) . '">' . '</a></li>';
+		if ( !empty( $impactshirts_options[$key . '_uid'] ) ) {
+			$html .= '<li class="' . esc_attr( $key ) . '-icon"><a href="' . $impactshirts_options[$key . '_uid'] . '">' . '<img src="' . impactshirts_child_uri( '/core/icons/' . esc_attr( $key ) . '-icon.png' ) . '" width="24" height="24" alt="' . esc_html( $value ) . '">' . '</a></li>';
 		}
 	}
 	$html .= '</ul><!-- .social-icons -->';

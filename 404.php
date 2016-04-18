@@ -10,12 +10,12 @@ if( !defined( 'ABSPATH' ) ) {
  *
  *
  * @file           404.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/404.php
+ * @filesource     wp-content/themes/impactshirts/404.php
  * @link           http://codex.wordpress.org/Creating_an_Error_404_Page
  * @since          available since Release 1.0
  */

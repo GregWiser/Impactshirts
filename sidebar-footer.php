@@ -25,9 +25,9 @@ if( !is_active_sidebar( 'footer-widget' ) ) {
 	return;
 }
 ?>
-<?php responsive_widgets_before(); // above widgets container hook ?>
+<?php impactshirts_widgets_before(); // above widgets container hook ?>
 	<div id="footer_widget" class="grid col-940">
-		<?php responsive_widgets(); // above widgets hook ?>
+		<?php impactshirts_widgets(); // above widgets hook ?>
 
 		<?php if( is_active_sidebar( 'footer-widget' ) ) : ?>
 
@@ -35,6 +35,6 @@ if( !is_active_sidebar( 'footer-widget' ) ) {
 
 		<?php endif; //end of colophon-widget ?>
 
-		<?php responsive_widgets_end(); // after widgets hook ?>
+		<?php impactshirts_widgets_end(); // after widgets hook ?>
 	</div><!-- end of #footer-widget -->
-<?php responsive_widgets_after(); // after widgets container hook ?>
+<?php impactshirts_widgets_after(); // after widgets container hook ?>

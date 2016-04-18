@@ -178,8 +178,8 @@ sub {
 	vertical-align: sub;
 }
 
-/* =Responsive 12 Column Grid
-    http://demos.cyberchimps.com/responsivepro/responsive-grid/
+/* =Impactshirts 12 Column Grid
+    http://demos.cyberchimps.com/impactshirtspro/impactshirts-grid/
 -------------------------------------------------------------- */
 .grid {
 	float: left;
@@ -282,7 +282,7 @@ sub {
 	display: block;
 }
 
-/* =Responsive Images
+/* =Impactshirts Images
 -------------------------------------------------------------- */
 img {
 	-ms-interpolation-mode: bicubic;
@@ -302,7 +302,7 @@ img {
 	width: auto;
 }
 
-/* =Responsive Videos
+/* =Impactshirts Videos
 -------------------------------------------------------------- */
 video {
 	width: 100%;
@@ -310,7 +310,7 @@ video {
 	height: auto;
 }
 
-/* =Responsive Embeds/Objects
+/* =Impactshirts Embeds/Objects
 -------------------------------------------------------------- */
 embed,
 object {
@@ -1353,11 +1353,11 @@ ul.menu > li:hover {
 	border-left: none;
 }
 
-.menu a#responsive_menu_button {
+.menu a#impactshirts_menu_button {
 	display: none;
 }
 
-.main-nav #responsive_current_menu_item {
+.main-nav #impactshirts_current_menu_item {
 	display: none;
 }
 

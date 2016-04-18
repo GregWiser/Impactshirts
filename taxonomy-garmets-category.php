@@ -64,10 +64,10 @@ $data = get_tax_meta($term->term_id,'categoryImage');
 			</ul>
 		</div>
 		
-			<?php responsive_entry_before(); ?>
+			<?php impactshirts_entry_before(); ?>
 
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php responsive_entry_top(); ?>
+				<?php impactshirts_entry_top(); ?>
 				<div class="cat-gallery">
 					<ul>
 						<?php $post_counter = 0; ?>
@@ -102,9 +102,9 @@ $data = get_tax_meta($term->term_id,'categoryImage');
 				</div>
 				<!-- end of .post-entry -->
 
-				<?php responsive_entry_bottom(); ?>
+				<?php impactshirts_entry_bottom(); ?>
 			</div><!-- end of #post-<?php the_ID(); ?> -->
-			<?php responsive_entry_after(); ?>
+			<?php impactshirts_entry_after(); ?>
 
 		<?php
 

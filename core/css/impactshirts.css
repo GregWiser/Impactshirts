@@ -1,4 +1,4 @@
-/* =Responsive (Mobile) Design
+/* =Impactshirts (Mobile) Design
 -------------------------------------------------------------- */
 
 @media screen and (max-width: 980px) {
@@ -191,7 +191,7 @@
 		min-width: 0;
 	}
 
-	.js .main-nav #responsive_current_menu_item {
+	.js .main-nav #impactshirts_current_menu_item {
 		display: block;
 		padding: 5px 40px 5px 10px;
 		color: #ffffff;
@@ -199,7 +199,7 @@
 		cursor: pointer;
 	}
 
-	.js .main-nav a#responsive_menu_button {
+	.js .main-nav a#impactshirts_menu_button {
 		position: absolute;
 		display: block;
 		top: 0;
@@ -211,7 +211,7 @@
 		cursor: pointer;
 	}
 
-	.js .main-nav a#responsive_menu_button.responsive-toggle-open {
+	.js .main-nav a#impactshirts_menu_button.impactshirts-toggle-open {
 		background: url('../images/select-icons.png') 0 -46px no-repeat;
 	}
 

@@ -54,20 +54,20 @@ if( !defined( 'ABSPATH' ) ) {
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=179660798774296&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<?php responsive_container(); // before container hook ?>
+<?php impactshirts_container(); // before container hook ?>
 <div id="container" class="hfeed">
 
-<?php responsive_header(); // before header hook ?>
+<?php impactshirts_header(); // before header hook ?>
 	<div id="fixedHeaderWrapper">
 	<div class="skip-container cf">
-		<a class="skip-link screen-reader-text focusable" href="#main"><?php _e( '&darr; Skip to Main Content', 'responsive' ); ?></a>
+		<a class="skip-link screen-reader-text focusable" href="#main"><?php _e( '&darr; Skip to Main Content', 'impactshirts' ); ?></a>
 	</div><!-- .skip-container -->
 	<div id="header-wrapper">
 		<div id="header">
 
-			<?php responsive_header_top(); // before header content hook ?> 
+			<?php impactshirts_header_top(); // before header content hook ?> 
 
-			<?php responsive_in_header(); // header hook ?>
+			<?php impactshirts_in_header(); // header hook ?>
 			<?php $data = get_option('impact-options'); ?>
 			<?php if( $data['site-logo']['src'] != '' ) : ?>
 
@@ -87,7 +87,7 @@ if( !defined( 'ABSPATH' ) ) {
 
 			<?php get_sidebar( 'top' ); $data = get_option('impact-options'); ?>
 
-			<?php responsive_header_bottom(); // after header content hook ?>
+			<?php impactshirts_header_bottom(); // after header content hook ?>
 				<div class="churchShirts">
 					<h2><?php echo $data['headerText']; ?></h2>
 					<p><?php echo $data['headerSubText']; ?></p>
@@ -108,13 +108,13 @@ if( !defined( 'ABSPATH' ) ) {
 					<?php wp_nav_menu( array(
 								   'container'       => 'div',
 								   'container_class' => 'main-nav',
-								   'fallback_cb'     => 'responsive_fallback_menu',
+								   'fallback_cb'     => 'impactshirts_fallback_menu',
 								   'theme_location'  => 'header-menu'
 							   )
 			);
 			?>
 
-			<?php if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) { ?>
+			<?php if( has_nav_menu( 'sub-header-menu', 'impactshirts' ) ) { ?>
 				<?php wp_nav_menu( array(
 									   'container'      => '',
 									   'menu_class'     => 'sub-header-menu',
@@ -132,9 +132,9 @@ if( !defined( 'ABSPATH' ) ) {
 	</div>
 	</div>
 	
-<?php responsive_header_end(); // after header container hook ?>
+<?php impactshirts_header_end(); // after header container hook ?>
 
-<?php responsive_wrapper(); // before wrapper container hook ?>
+<?php impactshirts_wrapper(); // before wrapper container hook ?>
 <?php 
 	if (is_front_page()) :
 		if(get_current_blog_id() == '1'):
@@ -150,6 +150,6 @@ if( !defined( 'ABSPATH' ) ) {
 <?php if(!is_search() && !is_404()): ?>
 	<div id="wrapper" class="clearfix">
 <?php endif; ?>
-<?php responsive_wrapper_top(); // before wrapper content hook ?>
-<?php responsive_in_wrapper(); // wrapper hook ?>
+<?php impactshirts_wrapper_top(); // before wrapper content hook ?>
+<?php impactshirts_in_wrapper(); // wrapper hook ?>
 <div class="clearfix"></div>

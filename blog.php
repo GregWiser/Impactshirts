@@ -11,12 +11,12 @@ if ( !defined( 'ABSPATH' ) ) {
 Template Name: Blog (full posts)
  *
  * @file           blog.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.1.0
- * @filesource     wp-content/themes/responsive/blog.php
+ * @filesource     wp-content/themes/impactshirts/blog.php
  * @link           http://codex.wordpress.org/Templates
  * @since          available since Release 1.0
  */
@@ -27,7 +27,7 @@ global $more;
 $more = 0;
 ?>
 
-<div id="content-blog" class="<?php echo esc_attr( implode( ' ', responsive_get_content_classes() ) ); ?>">
+<div id="content-blog" class="<?php echo esc_attr( implode( ' ', impactshirts_get_content_classes() ) ); ?>">
 
 	<?php get_template_part( 'loop-header', get_post_type() ); ?>
 
@@ -50,9 +50,9 @@ $more = 0;
 		while( $blog_query->have_posts() ) : $blog_query->the_post();
 			?>
 
-			<?php responsive_entry_before(); ?>
+			<?php impactshirts_entry_before(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php responsive_entry_top(); ?>
+				<?php impactshirts_entry_top(); ?>
 
 				<?php get_template_part( 'post-meta', get_post_type() ); ?>
 
@@ -62,15 +62,15 @@ $more = 0;
 							<?php the_post_thumbnail(); ?>
 						</a>
 					<?php endif; ?>
-					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
+					<?php the_content( __( 'Read more &#8250;', 'impactshirts' ) ); ?>
+					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'impactshirts' ), 'after' => '</div>' ) ); ?>
 				</div><!-- end of .post-entry -->
 
 				<?php get_template_part( 'post-data', get_post_type() ); ?>
 
-				<?php responsive_entry_bottom(); ?>
+				<?php impactshirts_entry_bottom(); ?>
 			</div><!-- end of #post-<?php the_ID(); ?> -->
-			<?php responsive_entry_after(); ?>
+			<?php impactshirts_entry_after(); ?>
 
 		<?php
 		endwhile;
@@ -78,8 +78,8 @@ $more = 0;
 		if ( $wp_query->max_num_pages > 1 ) :
 			?>
 			<div class="navigation">
-				<div class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'responsive' ), $wp_query->max_num_pages ); ?></div>
-				<div class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'responsive' ), $wp_query->max_num_pages ); ?></div>
+				<div class="previous"><?php next_posts_link( __( '&#8249; Older posts', 'impactshirts' ), $wp_query->max_num_pages ); ?></div>
+				<div class="next"><?php previous_posts_link( __( 'Newer posts &#8250;', 'impactshirts' ), $wp_query->max_num_pages ); ?></div>
 			</div><!-- end of .navigation -->
 		<?php
 		endif;

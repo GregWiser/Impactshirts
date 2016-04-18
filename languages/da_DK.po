@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Responsive Theme\n"
+"Project-Id-Version: Impactshirts Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-25 13:42:58 UTC\n"
 "PO-Revision-Date: 2014-05-28 06:06:32 UTC\n"
@@ -106,8 +106,8 @@ msgid "&uarr;"
 msgstr "&uarr;"
 
 #: footer.php
-msgid "Responsive Theme"
-msgstr "Responsive-tema"
+msgid "Impactshirts Theme"
+msgstr "Impactshirts-tema"
 
 #: footer.php
 msgid "powered by"
@@ -453,7 +453,7 @@ msgstr "Sitemap"
 msgid "Layout"
 msgstr "Layout"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/post-custom-meta.php
 msgid "Default"
 msgstr "Standard"
@@ -495,11 +495,11 @@ msgstr "Layout-elementer"
 msgid "Disable Call to Action Button?"
 msgstr "Deaktiver 'Klik her'-knap"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Save Options"
 msgstr "Gem indstillinger"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Restore Defaults"
 msgstr "Gendan standarder"
 
@@ -744,7 +744,7 @@ msgstr "Aktiver tilføjelser"
 msgid "All plugins installed and activated successfully. %s"
 msgstr "Alle plugins blev installeret og aktiveret. %s"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/theme-options/theme-options.php
 msgid "All theme settings will be lost!"
 msgstr "Alle temaindstillinger vil gå tabt!"
@@ -822,7 +822,7 @@ msgstr "klik for at aktivere"
 msgid "Click here"
 msgstr "Klik her"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/theme-options/theme-options.php
 msgid "Click OK to Restore."
 msgstr "Klik OK for at gendanne."
@@ -844,7 +844,7 @@ msgstr "&darr; Hop til hovedindhold"
 msgid "Disable breadcrumb list?"
 msgstr "Slå hierarkisk liste fra?"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/theme-options/theme-options.php
 msgid "Do you want to restore?"
 msgstr "Ønsker du at gendanne?"
@@ -873,8 +873,8 @@ msgstr "http://cyberchimps.com"
 
 #. Theme URI of the plugin/theme
 # INSTRUCTION: Theme URI of the plugin/theme
-msgid "http://cyberchimps.com/responsive-theme/"
-msgstr "http://cyberchimps.com/responsive-theme/"
+msgid "http://cyberchimps.com/impactshirts-theme/"
+msgstr "http://cyberchimps.com/impactshirts-theme/"
 
 #: core/includes/functions.php
 msgid "Installing Plugin: %s"
@@ -961,17 +961,17 @@ msgstr "Plugin aktiveret."
 
 #. Theme Name of the plugin/theme
 # INSTRUCTION: Theme Name of the plugin/theme
-msgid "Responsive"
-msgstr "Responsive"
+msgid "Impactshirts"
+msgstr "Impactshirts"
 
 #: core/includes/functions.php
-msgid "Responsive Add Features"
-msgstr "Responsive tilføj funktioner"
+msgid "Impactshirts Add Features"
+msgstr "Impactshirts tilføj funktioner"
 
 #. Description of the plugin/theme
 # INSTRUCTION: Description of the plugin/theme
-msgid "Responsive Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Responsive is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/responsive/\">Official support forum</a> (http://cyberchimps.com/forum/free/responsive/)"
-msgstr "Responsive Theme er et fleksibelt fundament med et flydende grid-system, der tilpasser din hjemmeside til mobile enheder, computer eller ethvert andet visningsmiljø. Temaet har 9 sideskabeloner, 11 widget-områder, 6 skabelon-layouts, 4 menupositioner og meget mere. Kraftfulde men simple temaindstillinger for fuld CMS-kontrol med let logo-upload, social networking og Webmaster Tools osv. Responsive er WooCommerce-kompatibel, klar til flersprogethed (WPML), har RTL-sprogunderstøttelse, er Retina-klar, søgemaskineoptimeret, W3C Markup-valideret og i øjeblikket oversat til 45 sprog. Cross-browser kompatibel. <a href=\"http://cyberchimps.com/forum/free/responsive/\">Officielt support-forum</a> (http://cyberchimps.com/forum/free/responsive/)"
+msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Official support forum</a> (http://cyberchimps.com/forum/free/impactshirts/)"
+msgstr "Impactshirts Theme er et fleksibelt fundament med et flydende grid-system, der tilpasser din hjemmeside til mobile enheder, computer eller ethvert andet visningsmiljø. Temaet har 9 sideskabeloner, 11 widget-områder, 6 skabelon-layouts, 4 menupositioner og meget mere. Kraftfulde men simple temaindstillinger for fuld CMS-kontrol med let logo-upload, social networking og Webmaster Tools osv. Impactshirts er WooCommerce-kompatibel, klar til flersprogethed (WPML), har RTL-sprogunderstøttelse, er Retina-klar, søgemaskineoptimeret, W3C Markup-valideret og i øjeblikket oversat til 45 sprog. Cross-browser kompatibel. <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Officielt support-forum</a> (http://cyberchimps.com/forum/free/impactshirts/)"
 
 #: core/includes/functions.php
 msgid "Return to Required Plugins Installer"
@@ -992,8 +992,8 @@ msgstr "Noget gik galt med plugin-API'et"
 #: core/includes/functions-update.php
 #. Translators: This is a big update. Please read the blog post beforeupdating.
 # INSTRUCTION: Translators: This is a big update. Please read the blog post beforeupdating.
-msgid "<strong>WARNING:</strong> There is a big <strong>Responsive Theme</strong> update available. Please read the %1$s before updating."
-msgstr "<strong>Advarsel:</strong> Der er en stor <strong>Responsive Theme</strong> opdatering tilgængelig. Læs venligst %1$s før du opdaterer."
+msgid "<strong>WARNING:</strong> There is a big <strong>Impactshirts Theme</strong> update available. Please read the %1$s before updating."
+msgstr "<strong>Advarsel:</strong> Der er en stor <strong>Impactshirts Theme</strong> opdatering tilgængelig. Læs venligst %1$s før du opdaterer."
 
 #: core/includes/functions.php
 msgid "The Custom Front Page is disabled. You can enable it in the <a href=\"%1$s\">theme settings</a>."
@@ -1016,7 +1016,7 @@ msgstr "Titeltekst"
 msgid "Translate"
 msgstr "Overæt"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Upgrade"
 msgstr "Opgrader"
 

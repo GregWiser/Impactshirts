@@ -9,21 +9,21 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * @since    1.9.4.9
  */
-function responsive_update_social_icon_options() {
-	$responsive_options = responsive_get_options();
+function impactshirts_update_social_icon_options() {
+	$impactshirts_options = impactshirts_get_options();
 	// If new option does not exist then copy the option
-	if ( !isset( $responsive_options['googleplus_uid'] ) ) {
-		$responsive_options['googleplus_uid'] = $responsive_options['google_plus_uid'];
+	if ( !isset( $impactshirts_options['googleplus_uid'] ) ) {
+		$impactshirts_options['googleplus_uid'] = $impactshirts_options['google_plus_uid'];
 	}
-	if ( !isset( $responsive_options['stumbleupon_uid'] ) ) {
-		$responsive_options['stumbleupon_uid'] = $responsive_options['stumble_uid'];
+	if ( !isset( $impactshirts_options['stumbleupon_uid'] ) ) {
+		$impactshirts_options['stumbleupon_uid'] = $impactshirts_options['stumble_uid'];
 	}
 
 	// Update entire array
-	update_option( 'responsive_theme_options', $responsive_options );
+	update_option( 'impactshirts_theme_options', $impactshirts_options );
 }
 
-add_action( 'after_setup_theme', 'responsive_update_social_icon_options' );
+add_action( 'after_setup_theme', 'impactshirts_update_social_icon_options' );
 
 /*
  * Update page templete meta data
@@ -33,7 +33,7 @@ add_action( 'after_setup_theme', 'responsive_update_social_icon_options' );
  * This function only needes to be run once but it does not mater when. after_setup_theme should be fine.
  *
  */
-function responsive_update_page_template_meta(){
+function impactshirts_update_page_template_meta(){
 	$args = array(
 		'post_type' => 'page',
 		'meta_query' => array(
@@ -64,23 +64,23 @@ function responsive_update_page_template_meta(){
 		}
 	}
 }
-add_action( 'after_switch_theme', 'responsive_update_page_template_meta' );
+add_action( 'after_switch_theme', 'impactshirts_update_page_template_meta' );
 
 /**
- * Responsive 2.0 update check
+ * Impactshirts 2.0 update check
  *
- * Queries WordPress.org API to get details on responsive theme where we can get the current version number
+ * Queries WordPress.org API to get details on impactshirts theme where we can get the current version number
  *
  * @return bool
  */
-function responsive_theme_query() {
+function impactshirts_theme_query() {
 
 	$themes = get_theme_updates();
 
 	$new_version = false;
 
 	foreach ( $themes as $stylesheet => $theme ) {
-		if ( 'responsive' == $stylesheet ) {
+		if ( 'impactshirts' == $stylesheet ) {
 			$new_version = $theme->update['new_version'];
 		}
 	}
@@ -95,22 +95,22 @@ function responsive_theme_query() {
 }
 
 /**
- * Responsive 2.0 update warning message
+ * Impactshirts 2.0 update warning message
  *
  * Displays warning message in the update notice
  */
-function responsive_admin_update_notice(){
+function impactshirts_admin_update_notice(){
 	global $pagenow;
 	// Add plugin notification only if the current user is admin and on theme.php
-	if ( responsive_theme_query() && current_user_can( 'update_themes' ) && ( 'themes.php' == $pagenow || 'update-core.php' == $pagenow ) ) {
+	if ( impactshirts_theme_query() && current_user_can( 'update_themes' ) && ( 'themes.php' == $pagenow || 'update-core.php' == $pagenow ) ) {
 		$html = '<div class="error"><p>';
 		$html .= sprintf(
 				/* Translators: This is a big update. Please read the blog post before updating. */
-				__( '<strong>WARNING:</strong> There is a big <strong>Responsive Theme</strong> update available. Please read the %1$s before updating.', 'responsive' ),
-				'<a href="' . esc_url( 'http://content.cyberchimps.com/responsive-2-migration' ) . '">' . __( 'update page', 'responsive' ) . '</a>'
+				__( '<strong>WARNING:</strong> There is a big <strong>Impactshirts Theme</strong> update available. Please read the %1$s before updating.', 'impactshirts' ),
+				'<a href="' . esc_url( 'http://content.cyberchimps.com/impactshirts-2-migration' ) . '">' . __( 'update page', 'impactshirts' ) . '</a>'
 			);
 		$html .= '</p></div>';
 		echo $html;
 	}
 }
-add_action( 'admin_notices', 'responsive_admin_update_notice' );
+add_action( 'admin_notices', 'impactshirts_admin_update_notice' );

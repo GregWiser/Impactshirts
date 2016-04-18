@@ -13,7 +13,7 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * @return string complete uri
  */
-function responsive_child_uri( $dir ) {
+function impactshirts_child_uri( $dir ) {
 	if ( is_child_theme() ) {
 		$directory = get_stylesheet_directory() . $dir;
 		$test      = is_file( $directory );
@@ -34,14 +34,14 @@ function responsive_child_uri( $dir ) {
  * For W3C validation purposes only.
  *
  */
-function responsive_category_rel_removal( $output ) {
+function impactshirts_category_rel_removal( $output ) {
 	$output = str_replace( ' rel="category tag"', '', $output );
 
 	return $output;
 }
 
-add_filter( 'wp_list_categories', 'responsive_category_rel_removal' );
-add_filter( 'the_category', 'responsive_category_rel_removal' );
+add_filter( 'wp_list_categories', 'impactshirts_category_rel_removal' );
+add_filter( 'the_category', 'impactshirts_category_rel_removal' );
 
 /**
  * Filter 'get_comments_number'
@@ -52,7 +52,7 @@ add_filter( 'the_category', 'responsive_category_rel_removal' );
  *
  * Chip Bennett Contribution
  */
-function responsive_comment_count( $count ) {
+function impactshirts_comment_count( $count ) {
 	if ( !is_admin() ) {
 		global $id;
 		$comments         = get_comments( 'status=approve&post_id=' . $id );
@@ -64,7 +64,7 @@ function responsive_comment_count( $count ) {
 	}
 }
 
-add_filter( 'get_comments_number', 'responsive_comment_count', 0 );
+add_filter( 'get_comments_number', 'impactshirts_comment_count', 0 );
 
 /**
  * wp_list_comments() Pings Callback
@@ -72,7 +72,7 @@ add_filter( 'get_comments_number', 'responsive_comment_count', 0 );
  * wp_list_comments() Callback function for
  * Pings (Trackbacks/Pingbacks)
  */
-function responsive_comment_list_pings( $comment ) {
+function impactshirts_comment_list_pings( $comment ) {
 	$GLOBALS['comment'] = $comment;
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
@@ -83,61 +83,61 @@ function responsive_comment_list_pings( $comment ) {
  * Sets the post excerpt length to 40 words.
  * Adopted from Coraline
  */
-function responsive_excerpt_length( $length ) {
+function impactshirts_excerpt_length( $length ) {
 	return 40;
 }
 
-add_filter( 'excerpt_length', 'responsive_excerpt_length' );
+add_filter( 'excerpt_length', 'impactshirts_excerpt_length' );
 
 /**
  * Returns a "Read more" link for excerpts
  */
-function responsive_read_more() {
-	return '<div class="read-more"><a href="' . get_permalink() . '">' . __( 'Read more &#8250;', 'responsive' ) . '</a></div><!-- end of .read-more -->';
+function impactshirts_read_more() {
+	return '<div class="read-more"><a href="' . get_permalink() . '">' . __( 'Read more &#8250;', 'impactshirts' ) . '</a></div><!-- end of .read-more -->';
 }
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and responsive_read_more_link().
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and impactshirts_read_more_link().
  */
-function responsive_auto_excerpt_more( $more ) {
-	return '<span class="ellipsis">&hellip;</span>' . responsive_read_more();
+function impactshirts_auto_excerpt_more( $more ) {
+	return '<span class="ellipsis">&hellip;</span>' . impactshirts_read_more();
 }
 
-add_filter( 'excerpt_more', 'responsive_auto_excerpt_more' );
+add_filter( 'excerpt_more', 'impactshirts_auto_excerpt_more' );
 
 /**
  * Adds a pretty "Read more" link to custom post excerpts.
  */
-function responsive_custom_excerpt_more( $output ) {
+function impactshirts_custom_excerpt_more( $output ) {
 	if ( has_excerpt() && !is_attachment() ) {
-		$output .= responsive_read_more();
+		$output .= impactshirts_read_more();
 	}
 
 	return $output;
 }
 
-add_filter( 'get_the_excerpt', 'responsive_custom_excerpt_more' );
+add_filter( 'get_the_excerpt', 'impactshirts_custom_excerpt_more' );
 
 /**
  * This function removes inline styles set by WordPress gallery.
  */
-function responsive_remove_gallery_css( $css ) {
+function impactshirts_remove_gallery_css( $css ) {
 	return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
 }
 
-add_filter( 'gallery_style', 'responsive_remove_gallery_css' );
+add_filter( 'gallery_style', 'impactshirts_remove_gallery_css' );
 
 /**
  * This function removes default styles set by WordPress recent comments widget.
  */
-function responsive_remove_recent_comments_style() {
+function impactshirts_remove_recent_comments_style() {
 	global $wp_widget_factory;
 	if ( isset( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'] ) ) {
 		remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 	}
 }
 
-add_action( 'widgets_init', 'responsive_remove_recent_comments_style' );
+add_action( 'widgets_init', 'impactshirts_remove_recent_comments_style' );
 
 /**
  * wp_title() Filter for better SEO.
@@ -146,9 +146,9 @@ add_action( 'widgets_init', 'responsive_remove_recent_comments_style' );
  * @see http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_title
  *
  */
-if ( !function_exists( 'responsive_wp_title' ) && !defined( 'AIOSEOP_VERSION' ) ) :
+if ( !function_exists( 'impactshirts_wp_title' ) && !defined( 'AIOSEOP_VERSION' ) ) :
 
-	function responsive_wp_title( $title, $sep ) {
+	function impactshirts_wp_title( $title, $sep ) {
 		global $page, $paged;
 
 		if ( is_feed() ) {
@@ -166,13 +166,13 @@ if ( !function_exists( 'responsive_wp_title' ) && !defined( 'AIOSEOP_VERSION' ) 
 
 		// Add a page number if necessary.
 		if ( $paged >= 2 || $page >= 2 ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'responsive' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Page %s', 'impactshirts' ), max( $paged, $page ) );
 		}
 
 		return $title;
 	}
 
-	add_filter( 'wp_title', 'responsive_wp_title', 10, 2 );
+	add_filter( 'wp_title', 'impactshirts_wp_title', 10, 2 );
 
 endif;
 
@@ -184,7 +184,7 @@ endif;
  * Marko Heijnen Contribution
  *
  */
-class responsive_widget_menu_class {
+class impactshirts_widget_menu_class {
 	public function __construct() {
 		add_action( 'widget_display_callback', array( $this, 'menu_different_class' ), 10, 2 );
 	}
@@ -201,19 +201,19 @@ class responsive_widget_menu_class {
 		remove_filter( 'wp_nav_menu_args', array( $this, 'wp_nav_menu_args' ) );
 
 		if ( 'menu' == $args['menu_class'] ) {
-			$args['menu_class'] = apply_filters( 'responsive_menu_widget_class', 'menu-widget' );
+			$args['menu_class'] = apply_filters( 'impactshirts_menu_widget_class', 'menu-widget' );
 		}
 
 		return $args;
 	}
 }
 
-$GLOBALS['nav_menu_widget_classname'] = new responsive_widget_menu_class();
+$GLOBALS['nav_menu_widget_classname'] = new impactshirts_widget_menu_class();
 
 /**
  * Removes div from wp_page_menu() and replace with ul.
  */
-function responsive_wp_page_menu( $page_markup ) {
+function impactshirts_wp_page_menu( $page_markup ) {
 	preg_match( '/^<div class=\"([a-z0-9-_]+)\">/i', $page_markup, $matches );
 	$divclass   = $matches[1];
 	$replace    = array( '<div class="' . $divclass . '">', '</div>' );
@@ -223,4 +223,4 @@ function responsive_wp_page_menu( $page_markup ) {
 	return $new_markup;
 }
 
-add_filter( 'wp_page_menu', 'responsive_wp_page_menu' );
+add_filter( 'wp_page_menu', 'impactshirts_wp_page_menu' );

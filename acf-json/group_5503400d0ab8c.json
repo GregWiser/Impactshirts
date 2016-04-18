@@ -122,7 +122,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "responsive-450",
+                    "preview_size": "impactshirts-450",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -1788,7 +1788,7 @@
                         "id": ""
                     },
                     "return_format": "url",
-                    "preview_size": "responsive-150",
+                    "preview_size": "impactshirts-150",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -1820,7 +1820,7 @@
                         "id": ""
                     },
                     "return_format": "url",
-                    "preview_size": "responsive-150",
+                    "preview_size": "impactshirts-150",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",

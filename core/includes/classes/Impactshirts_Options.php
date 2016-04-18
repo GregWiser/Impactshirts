@@ -7,8 +7,8 @@
  * Requires a sections array and an options array
  *
  *
- * @file           Responsive_Options.php
- * @package        Responsive
+ * @file           Impactshirts_Options.php
+ * @package        Impactshirts
  * @author         CyberChimps
  * @copyright      CyberChimps
  * @license        license.txt
@@ -16,16 +16,16 @@
  * @since          available since Release 1.9.5
  */
 
-Class Responsive_Options {
+Class Impactshirts_Options {
 
 	public $sections;
 
 	public $options;
 
-	public $responsive_options;
+	public $impactshirts_options;
 
 	/**
-	 * Pulls in the arrays for the options and sets up the responsive options
+	 * Pulls in the arrays for the options and sets up the impactshirts options
 	 *
 	 * @param $sections array
 	 * @param $options array
@@ -33,9 +33,9 @@ Class Responsive_Options {
 	public function __construct( $sections, $options ) {
 		$this->sections           = $sections;
 		$this->options            = $options;
-		$this->responsive_options = get_option( 'responsive_theme_options' );
+		$this->impactshirts_options = get_option( 'impactshirts_theme_options' );
 		// Set confirmaton text for restore default option as attributes of submit_button().
-		$this->attributes['onclick'] = 'return confirm("' . __( 'Do you want to restore?', 'responsive' ) . '\n' . __( 'All theme settings will be lost!', 'responsive' ) . '\n' . __( 'Click OK to Restore.', 'responsive' ) . '")';
+		$this->attributes['onclick'] = 'return confirm("' . __( 'Do you want to restore?', 'impactshirts' ) . '\n' . __( 'All theme settings will be lost!', 'impactshirts' ) . '\n' . __( 'Click OK to Restore.', 'impactshirts' ) . '")';
 	}
 
 	/**
@@ -134,13 +134,13 @@ Class Responsive_Options {
 
 		extract( $args );
 
-		$value = ( !empty( $this->responsive_options[$id] ) ) ? ( $this->responsive_options[$id] ) : '';
+		$value = ( !empty( $this->impactshirts_options[$id] ) ) ? ( $this->impactshirts_options[$id] ) : '';
 
-		$html = '<input id="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '" class="regular-text" type="text" name="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '" value="'
+		$html = '<input id="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '" class="regular-text" type="text" name="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '" value="'
 			. esc_html( $value ) . '"
         placeholder="' .
 			esc_attr( $placeholder ) . '" />
-                 <label class="description" for="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '">' . esc_html( $description ) . '</label>';
+                 <label class="description" for="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '">' . esc_html( $description ) . '</label>';
 
 		return $html;
 	}
@@ -159,17 +159,17 @@ Class Responsive_Options {
 		$class[] = 'large-text';
 		$classes = implode( ' ', $class );
 
-		$value = ( !empty( $this->responsive_options[$id] ) ) ? $this->responsive_options[$id] : '';
+		$value = ( !empty( $this->impactshirts_options[$id] ) ) ? $this->impactshirts_options[$id] : '';
 
 		$html = '<p>' . esc_html( $heading ) . '</p>
-                <textarea id="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '" class="' . esc_attr( $classes ) . '" cols="50" rows="30" name="' . esc_attr(
-				'responsive_theme_options[' . $id .
+                <textarea id="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '" class="' . esc_attr( $classes ) . '" cols="50" rows="30" name="' . esc_attr(
+				'impactshirts_theme_options[' . $id .
 				']'
 			) . '"
                  placeholder="' . $placeholder . '">' .
 			esc_html( $value ) .
 			'</textarea>
-			<label class="description" for="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '">' . esc_html( $description ) . '</label>';
+			<label class="description" for="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '">' . esc_html( $description ) . '</label>';
 
 		return $html;
 	}
@@ -187,9 +187,9 @@ Class Responsive_Options {
 
 		extract( $args );
 
-		$html = '<select id="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '" name="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '">';
+		$html = '<select id="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '" name="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '">';
 		foreach( $options as $key => $value ) {
-			$html .= '<option' . selected( $this->responsive_options[$id], $key, false ) . ' value="' . esc_attr( $key ) . '">' . esc_html( $value ) . '</option>';
+			$html .= '<option' . selected( $this->impactshirts_options[$id], $key, false ) . ' value="' . esc_attr( $key ) . '">' . esc_html( $value ) . '</option>';
 		}
 		$html .= '</select>';
 
@@ -208,11 +208,11 @@ Class Responsive_Options {
 
 		extract( $args );
 
-		$checked = ( isset( $this->responsive_options[$id] ) ) ? checked( '1', esc_attr( $this->responsive_options[$id] ), false ) : checked( 0, 1 );
+		$checked = ( isset( $this->impactshirts_options[$id] ) ) ? checked( '1', esc_attr( $this->impactshirts_options[$id] ), false ) : checked( 0, 1 );
 
-		$html = '<input id="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '" name="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '" type="checkbox" value="1" ' . $checked . '
+		$html = '<input id="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '" name="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '" type="checkbox" value="1" ' . $checked . '
          />
-                <label class="description" for="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '">' . wp_kses_post( $description ) . '</label>';
+                <label class="description" for="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '">' . wp_kses_post( $description ) . '</label>';
 
 		return $html;
 	}
@@ -237,9 +237,9 @@ Class Responsive_Options {
 	protected function save() {
 		echo '<div class="grid col-940">
                 <p class="submit">
-				' . get_submit_button( __( 'Save Options', 'responsive' ), 'primary', 'responsive_theme_options[submit]', false ) .
-			get_submit_button( __( 'Restore Defaults', 'responsive' ), 'secondary', 'responsive_theme_options[reset]', false, $this->attributes ) . '
-                <a href="http://cyberchimps.com/store/responsivepro/" class="button upgrade">' . __( 'Upgrade', 'responsive' ) . '</a>
+				' . get_submit_button( __( 'Save Options', 'impactshirts' ), 'primary', 'impactshirts_theme_options[submit]', false ) .
+			get_submit_button( __( 'Restore Defaults', 'impactshirts' ), 'secondary', 'impactshirts_theme_options[reset]', false, $this->attributes ) . '
+                <a href="http://cyberchimps.com/store/impactshirtspro/" class="button upgrade">' . __( 'Upgrade', 'impactshirts' ) . '</a>
                 </p>
                 </div>';
 
@@ -252,15 +252,15 @@ Class Responsive_Options {
 	 */
 	public static function valid_layouts() {
 		$layouts = array(
-			'default'                   => __( 'Default', 'responsive' ),
-			'content-sidebar-page'      => __( 'Content/Sidebar', 'responsive' ),
-			'sidebar-content-page'      => __( 'Sidebar/Content', 'responsive' ),
-			'content-sidebar-half-page' => __( 'Content/Sidebar Half Page', 'responsive' ),
-			'sidebar-content-half-page' => __( 'Sidebar/Content Half Page', 'responsive' ),
-			'full-width-page'           => __( 'Full Width Page (no sidebar)', 'responsive' )
+			'default'                   => __( 'Default', 'impactshirts' ),
+			'content-sidebar-page'      => __( 'Content/Sidebar', 'impactshirts' ),
+			'sidebar-content-page'      => __( 'Sidebar/Content', 'impactshirts' ),
+			'content-sidebar-half-page' => __( 'Content/Sidebar Half Page', 'impactshirts' ),
+			'sidebar-content-half-page' => __( 'Sidebar/Content Half Page', 'impactshirts' ),
+			'full-width-page'           => __( 'Full Width Page (no sidebar)', 'impactshirts' )
 		);
 
-		return apply_filters( 'responsive_valid_layouts', $layouts );
+		return apply_filters( 'impactshirts_valid_layouts', $layouts );
 	}
 
 	/**
@@ -302,10 +302,10 @@ Class Responsive_Options {
 		$class[] = 'large-text';
 		$classes = implode( ' ', $class );
 
-		$value = ( !empty( $this->responsive_options[$id] ) ) ? $this->responsive_options[$id] : '';
+		$value = ( !empty( $this->impactshirts_options[$id] ) ) ? $this->impactshirts_options[$id] : '';
 
 		$editor_settings = array(
-			'textarea_name' => 'responsive_theme_options[' . $id . ']',
+			'textarea_name' => 'impactshirts_theme_options[' . $id . ']',
 			'media_buttons' => true,
 			'tinymce'       => array( 'plugins' => 'wordpress' ),
 			'editor_class'  => esc_attr( $classes )
@@ -313,9 +313,9 @@ Class Responsive_Options {
 
 		$html = '<div class="tinymce-editor">';
 		ob_start();
-		$html .= wp_editor( $value, 'responsive_theme_options_' . $id . '_', $editor_settings );
+		$html .= wp_editor( $value, 'impactshirts_theme_options_' . $id . '_', $editor_settings );
 		$html .= ob_get_contents();
-		$html .= '<label class="description" for="' . esc_attr( 'responsive_theme_options[' . $id . ']' ) . '">' . esc_html( $description ) . '</label>';
+		$html .= '<label class="description" for="' . esc_attr( 'impactshirts_theme_options[' . $id . ']' ) . '">' . esc_html( $description ) . '</label>';
 		$html .= '</div>';
 		ob_clean();
 		return $html;

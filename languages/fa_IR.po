@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Responsive Theme\n"
+"Project-Id-Version: Impactshirts Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-25 13:42:58 UTC\n"
 "PO-Revision-Date: 2014-08-24 02:01:38 UTC\n"
@@ -105,8 +105,8 @@ msgid "&uarr;"
 msgstr "&uarr;"
 
 #: footer.php
-msgid "Responsive Theme"
-msgstr "Responsive Theme"
+msgid "Impactshirts Theme"
+msgstr "Impactshirts Theme"
 
 #: footer.php
 msgid "powered by"
@@ -448,7 +448,7 @@ msgstr "نقشه سایت"
 msgid "Layout"
 msgstr "چینش"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/post-custom-meta.php
 msgid "Default"
 msgstr "پیش فرض"
@@ -487,11 +487,11 @@ msgstr "عناصر پوسته"
 msgid "Disable Call to Action Button?"
 msgstr "کلید «فراخوانی برای اقدام» غیر فعال شود؟"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Save Options"
 msgstr "ذخیره تنظیمات"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Restore Defaults"
 msgstr "بازگرداندن مقادیر پیش‌فرض"
 
@@ -724,7 +724,7 @@ msgstr "فعال کردن امکانات اضافی"
 msgid "All plugins installed and activated successfully. %s"
 msgstr "تمام افزونه ها نصب و فعال گردید. ‎%s‎"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/theme-options/theme-options.php
 msgid "All theme settings will be lost!"
 msgstr "تمام تنظیمات پوسته از بین خواهد رفت!"
@@ -846,8 +846,8 @@ msgstr "http://cyberchimps.com"
 
 #. Theme URI of the plugin/theme
 # INSTRUCTION: Theme URI of the plugin/theme
-msgid "http://cyberchimps.com/responsive-theme/"
-msgstr "http://cyberchimps.com/responsive-theme/"
+msgid "http://cyberchimps.com/impactshirts-theme/"
+msgstr "http://cyberchimps.com/impactshirts-theme/"
 
 #: core/includes/functions.php
 msgid "Installing Plugin: %s"
@@ -922,17 +922,17 @@ msgstr "افزونه با موفقیت فعال گردید."
 
 #. Theme Name of the plugin/theme
 # INSTRUCTION: Theme Name of the plugin/theme
-msgid "Responsive"
-msgstr "Responsive"
+msgid "Impactshirts"
+msgstr "Impactshirts"
 
 #: core/includes/functions.php
-msgid "Responsive Add Features"
-msgstr "امکانات اضافی Responsive"
+msgid "Impactshirts Add Features"
+msgstr "امکانات اضافی Impactshirts"
 
 #. Description of the plugin/theme
 # INSTRUCTION: Description of the plugin/theme
-msgid "Responsive Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Responsive is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/responsive/\">Official support forum</a> (http://cyberchimps.com/forum/free/responsive/)"
-msgstr "پوسته Responsive از سیستم پیکربندی قابل انعطاف همراه با grid شناور بهره میگیرد و سایت شما را با موبایل، دسکتاپ و یا هر صفحه نمایش دیگری تطابق می دهد. این پوسته 9 قالب برای نمایش صفحات، 11 منطقه برای نمایش ابزارک ها، 6 قالب برای چینش، 4 محل برای نمایش منو و امکانات بسیار دیگری دارد. بسیار قدرتمند و در عین حال دارای امکانات ساده برای کنترل یک CMS کامل با امکان بارگزاری لوگو، شبکه های اجتماعی، ابزار Webmaster و غیره می باشد. Responsive با WooCommerce تطابق کامل دارد، چند زبانه است، از زبان های راست به چپ و صفحه نمایش Retina پشتیبانی می کند، با موتورهای جستجو عملکرد خوبی دارد، کد آن مورد تائید W3C است، هم اکنون به 45 زبان دنیا ترجمه می شود و با تمام مرورگرها نیز تطابق دارد. <a href=\"http://cyberchimps.com/forum/free/responsive/\">انجمن رسمی پشتیبانی</a> (http://cyberchimps.com/forum/free/responsive/)"
+msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Official support forum</a> (http://cyberchimps.com/forum/free/impactshirts/)"
+msgstr "پوسته Impactshirts از سیستم پیکربندی قابل انعطاف همراه با grid شناور بهره میگیرد و سایت شما را با موبایل، دسکتاپ و یا هر صفحه نمایش دیگری تطابق می دهد. این پوسته 9 قالب برای نمایش صفحات، 11 منطقه برای نمایش ابزارک ها، 6 قالب برای چینش، 4 محل برای نمایش منو و امکانات بسیار دیگری دارد. بسیار قدرتمند و در عین حال دارای امکانات ساده برای کنترل یک CMS کامل با امکان بارگزاری لوگو، شبکه های اجتماعی، ابزار Webmaster و غیره می باشد. Impactshirts با WooCommerce تطابق کامل دارد، چند زبانه است، از زبان های راست به چپ و صفحه نمایش Retina پشتیبانی می کند، با موتورهای جستجو عملکرد خوبی دارد، کد آن مورد تائید W3C است، هم اکنون به 45 زبان دنیا ترجمه می شود و با تمام مرورگرها نیز تطابق دارد. <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">انجمن رسمی پشتیبانی</a> (http://cyberchimps.com/forum/free/impactshirts/)"
 
 #: core/includes/functions.php
 msgid "Return to Required Plugins Installer"
@@ -952,8 +952,8 @@ msgstr "رابط برنامه‌نویسی افزونه دچار مشکل شده
 
 #. Translators: This is a big update. Please read the blog post beforeupdating.
 # INSTRUCTION: Translators: This is a big update. Please read the blog post beforeupdating.
-msgid "<strong>WARNING:</strong> There is a big <strong>Responsive Theme</strong> update available. Please read the %1$s before updating."
-msgstr "<strong>هشدار:</strong> این یک ارتقاء ضروری برای پوسته  <strong>Responsive</strong> است. لطفا قبل از ارتقاء %1$s را مطالعه کنید."
+msgid "<strong>WARNING:</strong> There is a big <strong>Impactshirts Theme</strong> update available. Please read the %1$s before updating."
+msgstr "<strong>هشدار:</strong> این یک ارتقاء ضروری برای پوسته  <strong>Impactshirts</strong> است. لطفا قبل از ارتقاء %1$s را مطالعه کنید."
 
 #: core/includes/functions.php
 msgid "The Custom Front Page is disabled. You can enable it in the <a href=\"%1$s\">theme settings</a>."
@@ -976,7 +976,7 @@ msgstr "متن عنوان"
 msgid "Translate"
 msgstr "ترجمه"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Upgrade"
 msgstr "ارتقاء"
 

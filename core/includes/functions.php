@@ -10,12 +10,12 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  *
  * @file           functions.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.2.1
- * @filesource     wp-content/themes/responsive/includes/functions.php
+ * @filesource     wp-content/themes/impactshirts/includes/functions.php
  * @link           http://codex.wordpress.org/Theme_Development#Functions_File
  * @since          available since Release 1.0
  */
@@ -24,7 +24,7 @@ if ( !defined( 'ABSPATH' ) ) {
 /*
  * Globalize Theme options
  */
-$responsive_options = responsive_get_options();
+$impactshirts_options = impactshirts_get_options();
 
 /**
  * Add plugin automation file
@@ -34,26 +34,26 @@ require_once( dirname( __FILE__ ) . '/classes/class-tgm-plugin-activation.php' )
 /*
  * Hook options
  */
-add_action( 'admin_init', 'responsive_theme_options_init' );
-add_action( 'admin_menu', 'responsive_theme_options_add_page' );
+add_action( 'admin_init', 'impactshirts_theme_options_init' );
+add_action( 'admin_menu', 'impactshirts_theme_options_add_page' );
 
 /**
  * Retrieve Theme option settings
  */
-function responsive_get_options() {
+function impactshirts_get_options() {
 	// Globalize the variable that holds the Theme options
-	global $responsive_options;
+	global $impactshirts_options;
 	// Parse array of option defaults against user-configured Theme options
-	$responsive_options = wp_parse_args( get_option( 'responsive_theme_options', array() ), responsive_get_option_defaults() );
+	$impactshirts_options = wp_parse_args( get_option( 'impactshirts_theme_options', array() ), impactshirts_get_option_defaults() );
 
 	// Return parsed args array
-	return $responsive_options;
+	return $impactshirts_options;
 }
 
 /**
- * Responsive Theme option defaults
+ * Impactshirts Theme option defaults
  */
-function responsive_get_option_defaults() {
+function impactshirts_get_option_defaults() {
 	$defaults = array(
 		'breadcrumb'                      => false,
 		'cta_button'                      => false,
@@ -81,25 +81,25 @@ function responsive_get_option_defaults() {
 		'yelp_uid'                        => '',
 		'vimeo_uid'                       => '',
 		'foursquare_uid'                  => '',
-		'responsive_inline_css'           => '',
-		'responsive_inline_js_head'       => '',
-		'responsive_inline_css_js_footer' => '',
+		'impactshirts_inline_css'           => '',
+		'impactshirts_inline_js_head'       => '',
+		'impactshirts_inline_css_js_footer' => '',
 		'static_page_layout_default'      => 'default',
 		'single_post_layout_default'      => 'default',
 		'blog_posts_index_layout_default' => 'default',
 	);
 
-	return apply_filters( 'responsive_option_defaults', $defaults );
+	return apply_filters( 'impactshirts_option_defaults', $defaults );
 }
 
 /**
  * Fire up the engines boys and girls let's start theme setup.
  */
-add_action( 'after_setup_theme', 'responsive_setup' );
+add_action( 'after_setup_theme', 'impactshirts_setup' );
 
-if ( !function_exists( 'responsive_setup' ) ):
+if ( !function_exists( 'impactshirts_setup' ) ):
 
-	function responsive_setup() {
+	function impactshirts_setup() {
 
 		global $content_width;
 
@@ -113,16 +113,16 @@ if ( !function_exists( 'responsive_setup' ) ):
 		}
 
 		/**
-		 * Responsive is now available for translations.
+		 * Impactshirts is now available for translations.
 		 * The translation files are in the /languages/ directory.
 		 * Translations are pulled from the WordPress default lanaguge folder
 		 * then from the child theme and then lastly from the parent theme.
 		 * @see http://codex.wordpress.org/Function_Reference/load_theme_textdomain
 		 */
 
-		$domain = 'responsive';
+		$domain = 'impactshirts';
 
-		load_theme_textdomain( $domain, WP_LANG_DIR . '/responsive/' );
+		load_theme_textdomain( $domain, WP_LANG_DIR . '/impactshirts/' );
 		load_theme_textdomain( $domain, get_stylesheet_directory() . '/languages/' );
 		load_theme_textdomain( $domain, get_template_directory() . '/languages/' );
 
@@ -155,10 +155,10 @@ if ( !function_exists( 'responsive_setup' ) ):
 		 * @see http://codex.wordpress.org/Function_Reference/register_nav_menus
 		 */
 		register_nav_menus( array(
-			'top-menu'        => __( 'Top Menu', 'responsive' ),
-			'header-menu'     => __( 'Header Menu', 'responsive' ),
-			'sub-header-menu' => __( 'Sub-Header Menu', 'responsive' ),
-			'footer-menu'     => __( 'Footer Menu', 'responsive' )
+			'top-menu'        => __( 'Top Menu', 'impactshirts' ),
+			'header-menu'     => __( 'Header Menu', 'impactshirts' ),
+			'sub-header-menu' => __( 'Sub-Header Menu', 'impactshirts' ),
+			'footer-menu'     => __( 'Footer Menu', 'impactshirts' )
 		) );
 
 		add_theme_support( 'custom-background' );
@@ -175,11 +175,11 @@ if ( !function_exists( 'responsive_setup' ) ):
 			// Header image height (in pixels)
 			'height'              => 100,
 			// Admin header style callback
-			'admin-head-callback' => 'responsive_admin_header_style'
+			'admin-head-callback' => 'impactshirts_admin_header_style'
 		) );
 
 		// gets included in the admin header
-		function responsive_admin_header_style() {
+		function impactshirts_admin_header_style() {
 			?>
 			<style type="text/css">
 				.appearance_page_custom-header #headimg {
@@ -190,22 +190,22 @@ if ( !function_exists( 'responsive_setup' ) ):
 		}
 
 		// While upgrading set theme option front page toggle not to affect old setup.
-		$responsive_options = get_option( 'responsive_theme_options' );
-		if ( $responsive_options && isset( $_GET['activated'] ) ) {
+		$impactshirts_options = get_option( 'impactshirts_theme_options' );
+		if ( $impactshirts_options && isset( $_GET['activated'] ) ) {
 
 			// If front_page is not in theme option previously then set it.
-			if ( !isset( $responsive_options['front_page'] ) ) {
+			if ( !isset( $impactshirts_options['front_page'] ) ) {
 
 				// Get template of page which is set as static front page
 				$template = get_post_meta( get_option( 'page_on_front' ), '_wp_page_template', true );
 
 				// If static front page template is set to default then set front page toggle of theme option to 1
 				if ( 'page' == get_option( 'show_on_front' ) && $template == 'default' ) {
-					$responsive_options['front_page'] = 1;
+					$impactshirts_options['front_page'] = 1;
 				} else {
-					$responsive_options['front_page'] = 0;
+					$impactshirts_options['front_page'] = 0;
 				}
-				update_option( 'responsive_theme_options', $responsive_options );
+				update_option( 'impactshirts_theme_options', $impactshirts_options );
 			}
 		}
 	}
@@ -219,23 +219,23 @@ endif;
  * templates, and when there are no active widgets in the sidebar.
  *
  */
-function responsive_content_width() {
+function impactshirts_content_width() {
 	global $content_width;
-	$full_width = is_page_template( 'full-width-page.php' ) || is_404() || 'full-width-page' == responsive_get_layout();
+	$full_width = is_page_template( 'full-width-page.php' ) || is_404() || 'full-width-page' == impactshirts_get_layout();
 	if ( $full_width ) {
 		$content_width = 918;
 	}
-	$half_width = is_page_template( 'sidebar-content-half-page.php' ) || is_page_template( 'content-sidebar-half-page.php' ) || 'sidebar-content-half-page' == responsive_get_layout() || 'content-sidebar-half-page' == responsive_get_layout();
+	$half_width = is_page_template( 'sidebar-content-half-page.php' ) || is_page_template( 'content-sidebar-half-page.php' ) || 'sidebar-content-half-page' == impactshirts_get_layout() || 'content-sidebar-half-page' == impactshirts_get_layout();
 	if ( $half_width ) {
 		$content_width = 449;
 	}
 }
-add_action( 'template_redirect', 'responsive_content_width' );
+add_action( 'template_redirect', 'impactshirts_content_width' );
 
 /**
  * Set a fallback menu that will show a home link.
  */
-function responsive_fallback_menu() {
+function impactshirts_fallback_menu() {
 	$args    = array(
 		'depth'       => 0,
 		'sort_column' => 'menu_order, post_title',
@@ -257,95 +257,95 @@ function responsive_fallback_menu() {
 /**
  * A safe way of adding stylesheets to a WordPress generated page.
  */
-if ( !function_exists( 'responsive_css' ) ) {
+if ( !function_exists( 'impactshirts_css' ) ) {
 
-	function responsive_css() {
+	function impactshirts_css() {
 		$theme      = wp_get_theme();
-		$responsive = wp_get_theme( 'responsive' );
-		$responsive_options = responsive_get_options();
-		if ( 1 == $responsive_options['minified_css'] ) {
-			wp_enqueue_style( 'responsive-style', get_template_directory_uri() . '/core/css/style.min.css', false, $responsive['Version'] );
+		$impactshirts = wp_get_theme( 'impactshirts' );
+		$impactshirts_options = impactshirts_get_options();
+		if ( 1 == $impactshirts_options['minified_css'] ) {
+			wp_enqueue_style( 'impactshirts-style', get_template_directory_uri() . '/core/css/style.min.css', false, $impactshirts['Version'] );
 		} else {
-			wp_enqueue_style( 'responsive-style', get_template_directory_uri() . '/core/css/style.css', false, $responsive['Version'] );
-			wp_enqueue_style( 'responsive-media-queries', get_template_directory_uri() . '/core/css/responsive.css', false, $responsive['Version'] );
+			wp_enqueue_style( 'impactshirts-style', get_template_directory_uri() . '/core/css/style.css', false, $impactshirts['Version'] );
+			wp_enqueue_style( 'impactshirts-media-queries', get_template_directory_uri() . '/core/css/impactshirts.css', false, $impactshirts['Version'] );
 		}
 
 		if ( is_rtl() ) {
-			wp_enqueue_style( 'responsive-rtl-style', get_template_directory_uri() . '/rtl.css', false, $responsive['Version'] );
+			wp_enqueue_style( 'impactshirts-rtl-style', get_template_directory_uri() . '/rtl.css', false, $impactshirts['Version'] );
 		}
 		if ( is_child_theme() ) {
-			wp_enqueue_style( 'responsive-child-style', get_stylesheet_uri(), false, $theme['Version'] );
+			wp_enqueue_style( 'impactshirts-child-style', get_stylesheet_uri(), false, $theme['Version'] );
 		}
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'responsive_css' );
+add_action( 'wp_enqueue_scripts', 'impactshirts_css' );
 
 /**
  * A safe way of adding JavaScripts to a WordPress generated page.
  */
-if ( !function_exists( 'responsive_js' ) ) {
+if ( !function_exists( 'impactshirts_js' ) ) {
 
-	function responsive_js() {
+	function impactshirts_js() {
 		$suffix                 = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 		$directory              = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? 'js-dev' : 'js';
 		$template_directory_uri = get_template_directory_uri();
 
 		// JS at the bottom for fast page loading.
 		// except for Modernizr which enables HTML5 elements & feature detects.
-		wp_enqueue_script( 'modernizr', $template_directory_uri . '/core/' . $directory . '/responsive-modernizr' . $suffix . '.js', array( 'jquery' ), '2.6.1', false );
-		wp_enqueue_script( 'responsive-scripts', $template_directory_uri . '/core/' . $directory . '/responsive-scripts' . $suffix . '.js', array( 'jquery' ), '1.2.6', true );
+		wp_enqueue_script( 'modernizr', $template_directory_uri . '/core/' . $directory . '/impactshirts-modernizr' . $suffix . '.js', array( 'jquery' ), '2.6.1', false );
+		wp_enqueue_script( 'impactshirts-scripts', $template_directory_uri . '/core/' . $directory . '/impactshirts-scripts' . $suffix . '.js', array( 'jquery' ), '1.2.6', true );
 		if ( !wp_script_is( 'tribe-placeholder' ) ) {
 			wp_enqueue_script( 'jquery-placeholder', $template_directory_uri . '/core/' . $directory . '/jquery.placeholder' . $suffix . '.js', array( 'jquery' ), '2.0.7', true );
 		}
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'responsive_js' );
+add_action( 'wp_enqueue_scripts', 'impactshirts_js' );
 
 /**
  * A comment reply.
  */
-function responsive_enqueue_comment_reply() {
+function impactshirts_enqueue_comment_reply() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'responsive_enqueue_comment_reply' );
+add_action( 'wp_enqueue_scripts', 'impactshirts_enqueue_comment_reply' );
 
 /**
  * Front Page function starts here. The Front page overides WP's show_on_front option. So when show_on_front option changes it sets the themes front_page to 0 therefore displaying the new option
  */
-function responsive_front_page_override( $new, $orig ) {
-	global $responsive_options;
+function impactshirts_front_page_override( $new, $orig ) {
+	global $impactshirts_options;
 
 	if ( $orig !== $new ) {
-		$responsive_options['front_page'] = 0;
+		$impactshirts_options['front_page'] = 0;
 
-		update_option( 'responsive_theme_options', $responsive_options );
+		update_option( 'impactshirts_theme_options', $impactshirts_options );
 	}
 
 	return $new;
 }
 
-add_filter( 'pre_update_option_show_on_front', 'responsive_front_page_override', 10, 2 );
+add_filter( 'pre_update_option_show_on_front', 'impactshirts_front_page_override', 10, 2 );
 
 /**
  * Funtion to add CSS class to body
  */
-function responsive_add_class( $classes ) {
+function impactshirts_add_class( $classes ) {
 
-	// Get Responsive theme option.
-	global $responsive_options;
-	if ( $responsive_options['front_page'] == 1 && is_front_page() ) {
+	// Get Impactshirts theme option.
+	global $impactshirts_options;
+	if ( $impactshirts_options['front_page'] == 1 && is_front_page() ) {
 		$classes[] = 'front-page';
 	}
 
 	return $classes;
 }
 
-add_filter( 'body_class', 'responsive_add_class' );
+add_filter( 'body_class', 'impactshirts_add_class' );
 
 
 /**
@@ -354,10 +354,10 @@ add_filter( 'body_class', 'responsive_add_class' );
  * Ulrich Pogson Contribution
  *
  */
-if ( !function_exists( 'responsive_post_meta_data' ) ) {
+if ( !function_exists( 'impactshirts_post_meta_data' ) ) {
 
-	function responsive_post_meta_data() {
-		printf( __( '<span class="%1$s">Posted on </span>%2$s<span class="%3$s"> by </span>%4$s', 'responsive' ),
+	function impactshirts_post_meta_data() {
+		printf( __( '<span class="%1$s">Posted on </span>%2$s<span class="%3$s"> by </span>%4$s', 'impactshirts' ),
 				'meta-prep meta-prep-author posted',
 				sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="timestamp updated" datetime="%3$s">%4$s</time></a>',
 						 esc_url( get_permalink() ),
@@ -368,7 +368,7 @@ if ( !function_exists( 'responsive_post_meta_data' ) ) {
 				'byline',
 				sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
 						 get_author_posts_url( get_the_author_meta( 'ID' ) ),
-						 sprintf( esc_attr__( 'View all posts by %s', 'responsive' ), get_the_author() ),
+						 sprintf( esc_attr__( 'View all posts by %s', 'impactshirts' ), get_the_author() ),
 						 esc_attr( get_the_author() )
 				)
 		);
@@ -380,11 +380,11 @@ if ( !function_exists( 'responsive_post_meta_data' ) ) {
 /**
  * Added the footer copyright setting to the theme customizer - starts
  */
-function responsive_footer_customizer( $wp_customize ) {
+function impactshirts_footer_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'footer_section',
 		array(
-		    'title' => __('Footer Settings','responsive'),
+		    'title' => __('Footer Settings','impactshirts'),
 		    'priority' => 35,
 		)
 	    );
@@ -393,14 +393,14 @@ function responsive_footer_customizer( $wp_customize ) {
 	    'copyright_textbox',
 	    array(
 		'sanitize_callback' => 'sanitize_text_field',
-		'default' => __('Default copyright text','responsive'),
+		'default' => __('Default copyright text','impactshirts'),
 	    )
 	  );
 
 	$wp_customize->add_setting(
 	    'poweredby_link',
 	    array(
-		'sanitize_callback' => 'responsive_sanitize_checkbox',
+		'sanitize_callback' => 'impactshirts_sanitize_checkbox',
 		'default' => '',
 	    )
 	  );	
@@ -408,7 +408,7 @@ function responsive_footer_customizer( $wp_customize ) {
 	$wp_customize->add_control(
 	    'copyright_textbox',
 	    array(
-		'label' => __('Copyright text','responsive'),
+		'label' => __('Copyright text','impactshirts'),
 		'section' => 'footer_section',
 		 'type' => 'text',
 	    )
@@ -417,7 +417,7 @@ function responsive_footer_customizer( $wp_customize ) {
 	$wp_customize->add_control(
 	    'poweredby_link',
 	    array(
-		'label' => __('Display Powered By WordPress Link','responsive'),
+		'label' => __('Display Powered By WordPress Link','impactshirts'),
 		'section' => 'footer_section',
 		'type' => 'checkbox',
 	    )
@@ -427,7 +427,7 @@ function responsive_footer_customizer( $wp_customize ) {
 	set_theme_mod( 'copyright_textbox', 'Default copyright text' );
 	}
 }
-add_action( 'customize_register', 'responsive_footer_customizer' );
+add_action( 'customize_register', 'impactshirts_footer_customizer' );
 
 function fetch_copyright(){
 	?>

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Responsive Theme\n"
+"Project-Id-Version: Impactshirts Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-25 13:42:58 UTC\n"
 "PO-Revision-Date: 2014-05-28 06:06:37 UTC\n"
@@ -105,8 +105,8 @@ msgid "&uarr;"
 msgstr "&uarr;"
 
 #: footer.php
-msgid "Responsive Theme"
-msgstr "Tema Responsive"
+msgid "Impactshirts Theme"
+msgstr "Tema Impactshirts"
 
 #: footer.php
 msgid "powered by"
@@ -455,7 +455,7 @@ msgstr "Mapa do site"
 msgid "Layout"
 msgstr "Disposição"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/post-custom-meta.php
 msgid "Default"
 msgstr "Padrão"
@@ -497,11 +497,11 @@ msgstr "Elementos do Tema"
 msgid "Disable Call to Action Button?"
 msgstr "Desativar bot&#227;o Chamada para A&#231;&#227;o?"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Save Options"
 msgstr "Guardar Op&#231;&#245;es"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Restore Defaults"
 msgstr "Restaurar Padrões"
 
@@ -746,7 +746,7 @@ msgstr "Ativar Add-ons"
 msgid "All plugins installed and activated successfully. %s"
 msgstr "Os plug-ins foram todos instalados e ativados com sucesso. %s"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/theme-options/theme-options.php
 msgid "All theme settings will be lost!"
 msgstr "Irá perder todas as definições do tema!"
@@ -824,7 +824,7 @@ msgstr "marque para ativar"
 msgid "Click here"
 msgstr "Clique aqui"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/theme-options/theme-options.php
 msgid "Click OK to Restore."
 msgstr "Clique em 'CONFIRMAR' para Restaurar."
@@ -846,7 +846,7 @@ msgstr "&darr; Ir para o Conteúdo Principal"
 msgid "Disable breadcrumb list?"
 msgstr ""
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 #: core/includes/theme-options/theme-options.php
 msgid "Do you want to restore?"
 msgstr "Deseja restaurar?"
@@ -875,7 +875,7 @@ msgstr "http://cyberchimps.com"
 
 #. Theme URI of the plugin/theme
 # INSTRUCTION: Theme URI of the plugin/theme
-msgid "http://cyberchimps.com/responsive-theme/"
+msgid "http://cyberchimps.com/impactshirts-theme/"
 msgstr ""
 
 #: core/includes/functions.php
@@ -952,16 +952,16 @@ msgstr "Plugin activado com sucesso."
 
 #. Theme Name of the plugin/theme
 # INSTRUCTION: Theme Name of the plugin/theme
-msgid "Responsive"
+msgid "Impactshirts"
 msgstr ""
 
 #: core/includes/functions.php
-msgid "Responsive Add Features"
+msgid "Impactshirts Add Features"
 msgstr ""
 
 #. Description of the plugin/theme
 # INSTRUCTION: Description of the plugin/theme
-msgid "Responsive Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Responsive is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/responsive/\">Official support forum</a> (http://cyberchimps.com/forum/free/responsive/)"
+msgid "Impactshirts Theme is a flexible foundation with fluid grid system that adapts your website to mobile devices and the desktop or any other viewing environment. Theme features 9 Page Templates, 11 Widget Areas, 6 Template Layouts, 4 Menu Positions and more. Powerful but simple Theme Options for full CMS control with easy Logo Upload, Social Networking and Webmaster Tools etc. Impactshirts is WooCommerce Compatible, Multilingual Ready (WPML), RTL-Language Support, Retina-Ready, Search Engine Friendly, W3C Markup Validated and currently translated into 45 languages. Cross-Browser compatible. <a href=\"http://cyberchimps.com/forum/free/impactshirts/\">Official support forum</a> (http://cyberchimps.com/forum/free/impactshirts/)"
 msgstr ""
 
 #: core/includes/functions.php
@@ -983,7 +983,7 @@ msgstr "Ocorreu algo com o plug-in API."
 #: core/includes/functions-update.php
 #. Translators: This is a big update. Please read the blog post beforeupdating.
 # INSTRUCTION: Translators: This is a big update. Please read the blog post beforeupdating.
-msgid "<strong>WARNING:</strong> There is a big <strong>Responsive Theme</strong> update available. Please read the %1$s before updating."
+msgid "<strong>WARNING:</strong> There is a big <strong>Impactshirts Theme</strong> update available. Please read the %1$s before updating."
 msgstr ""
 
 #: core/includes/functions.php
@@ -1007,7 +1007,7 @@ msgstr "Texto do título"
 msgid "Translate"
 msgstr "Traduzir"
 
-#: core/includes/classes/Responsive_Options.php
+#: core/includes/classes/Impactshirts_Options.php
 msgid "Upgrade"
 msgstr "Actualizar"
 

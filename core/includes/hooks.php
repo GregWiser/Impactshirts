@@ -10,12 +10,12 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  *
  * @file           hooks.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/includes/hooks.php
+ * @filesource     wp-content/themes/impactshirts/includes/hooks.php
  * @link           http://codex.wordpress.org/Plugin_API/Hooks
  * @since          available since Release 1.1
  */
@@ -25,8 +25,8 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * @see header.php
  */
-function responsive_container() {
-	do_action( 'responsive_container' );
+function impactshirts_container() {
+	do_action( 'impactshirts_container' );
 }
 
 /**
@@ -34,8 +34,8 @@ function responsive_container() {
  *
  * @see footer.php
  */
-function responsive_container_end() {
-	do_action( 'responsive_container_end' );
+function impactshirts_container_end() {
+	do_action( 'impactshirts_container_end' );
 	tha_footer_before();
 }
 
@@ -44,8 +44,8 @@ function responsive_container_end() {
  *
  * @see header.php
  */
-function responsive_header() {
-	do_action( 'responsive_header' );
+function impactshirts_header() {
+	do_action( 'impactshirts_header' );
 	tha_header_before();
 }
 
@@ -54,8 +54,8 @@ function responsive_header() {
  *
  * @see header.php
  */
-function responsive_header_top() {
-	do_action( 'responsive_header_top' );
+function impactshirts_header_top() {
+	do_action( 'impactshirts_header_top' );
 	tha_header_top();
 }
 
@@ -64,8 +64,8 @@ function responsive_header_top() {
  *
  * @see header.php
  */
-function responsive_in_header() {
-	do_action( 'responsive_in_header' );
+function impactshirts_in_header() {
+	do_action( 'impactshirts_in_header' );
 }
 
 /**
@@ -73,8 +73,8 @@ function responsive_in_header() {
  *
  * @see header.php
  */
-function responsive_header_bottom() {
-	do_action( 'responsive_header_bottom' );
+function impactshirts_header_bottom() {
+	do_action( 'impactshirts_header_bottom' );
 	tha_header_bottom();
 }
 
@@ -83,8 +83,8 @@ function responsive_header_bottom() {
  *
  * @see header.php
  */
-function responsive_header_end() {
-	do_action( 'responsive_header_end' );
+function impactshirts_header_end() {
+	do_action( 'impactshirts_header_end' );
 	tha_header_after();
 }
 
@@ -93,8 +93,8 @@ function responsive_header_end() {
  *
  * @see header.php
  */
-function responsive_wrapper() {
-	do_action( 'responsive_wrapper' );
+function impactshirts_wrapper() {
+	do_action( 'impactshirts_wrapper' );
 	tha_content_before();
 }
 
@@ -103,8 +103,8 @@ function responsive_wrapper() {
  *
  * @see header.php
  */
-function responsive_wrapper_top() {
-	do_action( 'responsive_wrapper_top' );
+function impactshirts_wrapper_top() {
+	do_action( 'impactshirts_wrapper_top' );
 	tha_content_top();
 }
 
@@ -113,8 +113,8 @@ function responsive_wrapper_top() {
  *
  * @see header.php
  */
-function responsive_in_wrapper() {
-	do_action( 'responsive_in_wrapper' );
+function impactshirts_in_wrapper() {
+	do_action( 'impactshirts_in_wrapper' );
 }
 
 /**
@@ -122,8 +122,8 @@ function responsive_in_wrapper() {
  *
  * @see header.php
  */
-function responsive_wrapper_bottom() {
-	do_action( 'responsive_wrapper_bottom' );
+function impactshirts_wrapper_bottom() {
+	do_action( 'impactshirts_wrapper_bottom' );
 	tha_content_bottom();
 }
 
@@ -132,8 +132,8 @@ function responsive_wrapper_bottom() {
  *
  * @see header.php
  */
-function responsive_wrapper_end() {
-	do_action( 'responsive_wrapper_end' );
+function impactshirts_wrapper_end() {
+	do_action( 'impactshirts_wrapper_end' );
 	tha_content_after();
 }
 
@@ -141,8 +141,8 @@ function responsive_wrapper_end() {
  *
  * @see index.php
  */
-function responsive_entry_before() {
-	do_action( 'responsive_entry_before' );
+function impactshirts_entry_before() {
+	do_action( 'impactshirts_entry_before' );
 	tha_entry_before();
 }
 
@@ -150,8 +150,8 @@ function responsive_entry_before() {
  *
  * @see index.php
  */
-function responsive_entry_top() {
-	do_action( 'responsive_entry_top' );
+function impactshirts_entry_top() {
+	do_action( 'impactshirts_entry_top' );
 	tha_entry_top();
 }
 
@@ -159,8 +159,8 @@ function responsive_entry_top() {
  *
  * @see index.php
  */
-function responsive_entry_bottom() {
-	do_action( 'responsive_entry_bottom' );
+function impactshirts_entry_bottom() {
+	do_action( 'impactshirts_entry_bottom' );
 	tha_entry_bottom();
 }
 
@@ -168,8 +168,8 @@ function responsive_entry_bottom() {
  *
  * @see index.php
  */
-function responsive_entry_after() {
-	do_action( 'responsive_entry_after' );
+function impactshirts_entry_after() {
+	do_action( 'impactshirts_entry_after' );
 	tha_entry_after();
 }
 
@@ -177,8 +177,8 @@ function responsive_entry_after() {
  *
  * @see index.php
  */
-function responsive_comments_before() {
-	do_action( 'responsive_comments_before' );
+function impactshirts_comments_before() {
+	do_action( 'impactshirts_comments_before' );
 	tha_comments_before();
 }
 
@@ -186,8 +186,8 @@ function responsive_comments_before() {
  *
  * @see index.php
  */
-function responsive_comments_after() {
-	do_action( 'responsive_comments_after' );
+function impactshirts_comments_after() {
+	do_action( 'impactshirts_comments_after' );
 	tha_comments_after();
 }
 
@@ -196,8 +196,8 @@ function responsive_comments_after() {
  *
  * @see sidebar.php
  */
-function responsive_widgets_before() {
-	do_action( 'responsive_widgets_before' );
+function impactshirts_widgets_before() {
+	do_action( 'impactshirts_widgets_before' );
 	tha_sidebars_before();
 }
 
@@ -206,8 +206,8 @@ function responsive_widgets_before() {
  *
  * @see sidebar.php
  */
-function responsive_widgets() {
-	do_action( 'responsive_widgets' );
+function impactshirts_widgets() {
+	do_action( 'impactshirts_widgets' );
 	tha_sidebar_top();
 }
 
@@ -216,8 +216,8 @@ function responsive_widgets() {
  *
  * @see sidebar.php
  */
-function responsive_widgets_end() {
-	do_action( 'responsive_widgets_end' );
+function impactshirts_widgets_end() {
+	do_action( 'impactshirts_widgets_end' );
 	tha_sidebar_bottom();
 }
 
@@ -226,8 +226,8 @@ function responsive_widgets_end() {
  *
  * @see sidebar.php
  */
-function responsive_widgets_after() {
-	do_action( 'responsive_widgets_after' );
+function impactshirts_widgets_after() {
+	do_action( 'impactshirts_widgets_after' );
 	tha_sidebars_after();
 }
 
@@ -236,8 +236,8 @@ function responsive_widgets_after() {
  *
  * @see footer.php
  */
-function responsive_footer_top() {
-	do_action( 'responsive_footer_top' );
+function impactshirts_footer_top() {
+	do_action( 'impactshirts_footer_top' );
 	tha_footer_top();
 }
 
@@ -246,8 +246,8 @@ function responsive_footer_top() {
  *
  * @see footer.php
  */
-function responsive_footer_bottom() {
-	do_action( 'responsive_footer_bottom' );
+function impactshirts_footer_bottom() {
+	do_action( 'impactshirts_footer_bottom' );
 	tha_footer_bottom();
 }
 
@@ -256,8 +256,8 @@ function responsive_footer_bottom() {
  *
  * @see footer.php
  */
-function responsive_footer_after() {
-	do_action( 'responsive_footer_after' );
+function impactshirts_footer_after() {
+	do_action( 'impactshirts_footer_after' );
 	tha_footer_after();
 }
 
@@ -266,8 +266,8 @@ function responsive_footer_after() {
  *
  * @see theme-options.php
  */
-function responsive_theme_options() {
-	do_action( 'responsive_theme_options' );
+function impactshirts_theme_options() {
+	do_action( 'impactshirts_theme_options' );
 }
 
 /**
@@ -278,13 +278,13 @@ function responsive_theme_options() {
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-add_action( 'woocommerce_before_main_content', 'responsive_woocommerce_wrapper', 10 );
-add_action( 'woocommerce_after_main_content', 'responsive_woocommerce_wrapper_end', 10 );
+add_action( 'woocommerce_before_main_content', 'impactshirts_woocommerce_wrapper', 10 );
+add_action( 'woocommerce_after_main_content', 'impactshirts_woocommerce_wrapper_end', 10 );
 
-function responsive_woocommerce_wrapper() {
+function impactshirts_woocommerce_wrapper() {
 	echo '<div id="content-woocommerce" class="grid col-620">';
 }
 
-function responsive_woocommerce_wrapper_end() {
+function impactshirts_woocommerce_wrapper_end() {
 	echo '</div><!-- end of #content-woocommerce -->';
 }

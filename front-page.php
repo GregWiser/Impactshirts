@@ -12,16 +12,16 @@ Template Name: SEO Landing Page
 /**
  * Globalize Theme Options
  */
-$responsive_options = responsive_get_options();
+$impactshirts_options = impactshirts_get_options();
 /**
  * If front page is set to display the
  * blog posts index, include home.php;
  * otherwise, display static front page
  * content
  */
-if ( 'posts' == get_option( 'show_on_front' ) && $responsive_options['front_page'] != 1 ) {
+if ( 'posts' == get_option( 'show_on_front' ) && $impactshirts_options['front_page'] != 1 ) {
 	get_template_part( 'home' );
-} elseif ( 'page' == get_option( 'show_on_front' ) && $responsive_options['front_page'] != 1 ) {
+} elseif ( 'page' == get_option( 'show_on_front' ) && $impactshirts_options['front_page'] != 1 ) {
 	$template = get_post_meta( get_option( 'page_on_front' ), '_wp_page_template', true );
 	$template = ( $template == 'default' ) ? 'index.php' : $template;
 	locate_template( $template, true );
@@ -30,9 +30,9 @@ if ( 'posts' == get_option( 'show_on_front' ) && $responsive_options['front_page
 	get_header();
 
 	//test for first install no database
-	$db = get_option( 'responsive_theme_options' );
+	$db = get_option( 'impactshirts_theme_options' );
 	//test if all options are empty so we can display default text if they are
-	$empty = ( empty( $responsive_options['home_headline'] ) && empty( $responsive_options['home_subheadline'] ) && empty( $responsive_options['home_content_area'] ) ) ? false : true;
+	$empty = ( empty( $impactshirts_options['home_headline'] ) && empty( $impactshirts_options['home_subheadline'] ) && empty( $impactshirts_options['home_content_area'] ) ) ? false : true;
 	?>
 	<?php $data = get_option('impact-options'); ?>
 	<div id="featured" class="grid col-940">

@@ -23,8 +23,8 @@ function cyberchimps_upsell_style() {
 	$suffix        = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	wp_enqueue_style( 'bootstrap', $directory_uri . '/core/includes/upsell/bootstrap/css/bootstrap' . $suffix . '.css' );
-	wp_enqueue_style( 'bootstrap-responsive', $directory_uri . '/core/includes/upsell/bootstrap/css/bootstrap-responsive' . $suffix . '.css', 'bootstrap' );
-	wp_enqueue_style( 'cyberchimps-responsive', $directory_uri . '/core/includes/upsell/bootstrap/css/cyberchimps-responsive' . $suffix . '.css', array( 'bootstrap', 'bootstrap-responsive' ) );
+	wp_enqueue_style( 'bootstrap-impactshirts', $directory_uri . '/core/includes/upsell/bootstrap/css/bootstrap-impactshirts' . $suffix . '.css', 'bootstrap' );
+	wp_enqueue_style( 'cyberchimps-impactshirts', $directory_uri . '/core/includes/upsell/bootstrap/css/cyberchimps-impactshirts' . $suffix . '.css', array( 'bootstrap', 'bootstrap-impactshirts' ) );
 
 	wp_enqueue_style( 'upsell_style', get_template_directory_uri() . '/core/includes/upsell/css/upsell' . $suffix . '.css' );
 }

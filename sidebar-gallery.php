@@ -10,67 +10,67 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  *
  * @file           sidebar-gallery.php
- * @package        Responsive
+ * @package        Impactshirts
  * @author         Emil Uzelac
  * @copyright      2003 - 2014 CyberChimps
  * @license        license.txt
  * @version        Release: 1.0
- * @filesource     wp-content/themes/responsive/sidebar-gallery.php
+ * @filesource     wp-content/themes/impactshirts/sidebar-gallery.php
  * @link           http://codex.wordpress.org/Theme_Development#Widgets_.28sidebar.php.29
  * @since          available since Release 1.0
  */
 ?>
-<?php responsive_widgets_before(); // above widgets container hook ?>
+<?php impactshirts_widgets_before(); // above widgets container hook ?>
 	<div id="widgets" class="grid col-300 fit gallery-meta">
-		<?php responsive_widgets(); // above widgets hook ?>
+		<?php impactshirts_widgets(); // above widgets hook ?>
 		<div class="widget-wrapper">
 
-			<div class="widget-title"><h3><?php _e( 'Image Information', 'responsive' ); ?></h3></div>
+			<div class="widget-title"><h3><?php _e( 'Image Information', 'impactshirts' ); ?></h3></div>
 			<ul>
 				<?php
-				$responsive_data = get_post_meta( $post->ID, '_wp_attachment_metadata', true );
+				$impactshirts_data = get_post_meta( $post->ID, '_wp_attachment_metadata', true );
 
-				if ( is_array( $responsive_data ) ) {
+				if ( is_array( $impactshirts_data ) ) {
 					?>
-					<span class="full-size"><?php _e( 'Full Size:', 'responsive' ); ?> <a href="<?php echo wp_get_attachment_url( $post->ID ); ?>"><?php echo esc_attr( $responsive_data['width'] ) . '&#215;' . esc_attr( $responsive_data['height'] ); ?></a>px</span>
+					<span class="full-size"><?php _e( 'Full Size:', 'impactshirts' ); ?> <a href="<?php echo wp_get_attachment_url( $post->ID ); ?>"><?php echo esc_attr( $impactshirts_data['width'] ) . '&#215;' . esc_attr( $impactshirts_data['height'] ); ?></a>px</span>
 
 					<?php
-					if ( is_array( $responsive_data['image_meta'] ) ) {
+					if ( is_array( $impactshirts_data['image_meta'] ) ) {
 						?>
-						<?php if ( $responsive_data['image_meta']['aperture'] ) { ?>
-							<span class="aperture"><?php _e( 'Aperture: f&#47;', 'responsive' ); ?><?php echo esc_attr( $responsive_data['image_meta']['aperture'] ); ?></span>
+						<?php if ( $impactshirts_data['image_meta']['aperture'] ) { ?>
+							<span class="aperture"><?php _e( 'Aperture: f&#47;', 'impactshirts' ); ?><?php echo esc_attr( $impactshirts_data['image_meta']['aperture'] ); ?></span>
 						<?php } ?>
 
-						<?php if ( $responsive_data['image_meta']['focal_length'] ) { ?>
+						<?php if ( $impactshirts_data['image_meta']['focal_length'] ) { ?>
 							<span
-								class="focal-length"><?php _e( 'Focal Length:', 'responsive' ); ?> <?php echo esc_attr( $responsive_data['image_meta']['focal_length'] ); ?><?php _e( 'mm', 'responsive' ); ?></span>
+								class="focal-length"><?php _e( 'Focal Length:', 'impactshirts' ); ?> <?php echo esc_attr( $impactshirts_data['image_meta']['focal_length'] ); ?><?php _e( 'mm', 'impactshirts' ); ?></span>
 						<?php } ?>
 
-						<?php if ( $responsive_data['image_meta']['iso'] ) { ?>
-							<span class="iso"><?php _e( 'ISO:', 'responsive' ); ?> <?php echo esc_attr( $responsive_data['image_meta']['iso'] ); ?></span>
+						<?php if ( $impactshirts_data['image_meta']['iso'] ) { ?>
+							<span class="iso"><?php _e( 'ISO:', 'impactshirts' ); ?> <?php echo esc_attr( $impactshirts_data['image_meta']['iso'] ); ?></span>
 						<?php } ?>
 
-						<?php if ( $responsive_data['image_meta']['shutter_speed'] ) { ?>
-							<span class="shutter"><?php _e( 'Shutter:', 'responsive' ); ?>
+						<?php if ( $impactshirts_data['image_meta']['shutter_speed'] ) { ?>
+							<span class="shutter"><?php _e( 'Shutter:', 'impactshirts' ); ?>
 								<?php
-								if ( ( 1 / $responsive_data['image_meta']['shutter_speed'] ) > 1 ) {
+								if ( ( 1 / $impactshirts_data['image_meta']['shutter_speed'] ) > 1 ) {
 									echo "1/";
-									if ( number_format( ( 1 / esc_attr( $responsive_data['image_meta']['shutter_speed'] ) ), 1 ) == number_format( ( 1 / esc_attr( $responsive_data['image_meta']['shutter_speed'] ) ), 0 ) ) {
-										echo number_format( ( 1 / esc_attr( $responsive_data['image_meta']['shutter_speed'] ) ), 0, '.', '' ) . ' ' . __( 'sec', 'responsive' );
+									if ( number_format( ( 1 / esc_attr( $impactshirts_data['image_meta']['shutter_speed'] ) ), 1 ) == number_format( ( 1 / esc_attr( $impactshirts_data['image_meta']['shutter_speed'] ) ), 0 ) ) {
+										echo number_format( ( 1 / esc_attr( $impactshirts_data['image_meta']['shutter_speed'] ) ), 0, '.', '' ) . ' ' . __( 'sec', 'impactshirts' );
 									}
 									else {
-										echo number_format( ( 1 / esc_attr( $responsive_data['image_meta']['shutter_speed'] ) ), 1, '.', '' ) . ' ' . __( 'sec', 'responsive' );
+										echo number_format( ( 1 / esc_attr( $impactshirts_data['image_meta']['shutter_speed'] ) ), 1, '.', '' ) . ' ' . __( 'sec', 'impactshirts' );
 									}
 								}
 								else {
-									echo esc_attr( $responsive_data['image_meta']['shutter_speed'] ) . ' ' . __( 'sec', 'responsive' );
+									echo esc_attr( $impactshirts_data['image_meta']['shutter_speed'] ) . ' ' . __( 'sec', 'impactshirts' );
 								}
 								?>
 								</span>
 						<?php } ?>
 
-						<?php if ( $responsive_data['image_meta']['camera'] ) { ?>
-							<span class="camera"><?php _e( 'Camera:', 'responsive' ); ?> <?php echo esc_attr( $responsive_data['image_meta']['camera'] ); ?></span>
+						<?php if ( $impactshirts_data['image_meta']['camera'] ) { ?>
+							<span class="camera"><?php _e( 'Camera:', 'impactshirts' ); ?> <?php echo esc_attr( $impactshirts_data['image_meta']['camera'] ); ?></span>
 						<?php
 						}
 					}
@@ -89,12 +89,12 @@ if ( !defined( 'ABSPATH' ) ) {
 
 	<div id="widgets" class="grid col-300 fit">
 
-		<?php responsive_widgets(); // above widgets hook ?>
+		<?php impactshirts_widgets(); // above widgets hook ?>
 
 		<?php dynamic_sidebar( 'gallery-widget' ); ?>
 
-		<?php responsive_widgets_end(); // after widgets hook ?>
+		<?php impactshirts_widgets_end(); // after widgets hook ?>
 	</div><!-- end of #widgets -->
-	<?php responsive_widgets_after(); // after widgets container hook ?>
+	<?php impactshirts_widgets_after(); // after widgets container hook ?>
 
 <?php endif; ?>

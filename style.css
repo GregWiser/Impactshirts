@@ -1706,6 +1706,7 @@ a.returnHomepage {
 }
 .group-names > ul > li.grid.col-172 h2{
     margin: 0 20px 10px 20px;
+    font-size: 1.6em;
 }
 .group-names > ul > li.grid.col-172 .group_image_class{
         display: inline-block;

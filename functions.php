@@ -35,14 +35,15 @@ require( $template_directory . '/core/includes/customizer.php' );
 require $template_directory . '/functions/theme-update-checker/theme-update-checker.php';
 $example_update_checker = new ThemeUpdateChecker(
 	'impactshirts',
-	'http://example.com/example-theme/info.json'
+	'https://raw.githubusercontent.com/GregWiser/Impactshirts/master/info.json'
 );
 /*$className = PucFactory::getLatestClassVersion('PucGitHubChecker');
 $myUpdateChecker = new $className(
 	'https://github.com/GregWiser/Impactshirts/',
 	__FILE__,
 	'master'
-);*/
+);
+*/
 // Return value of the supplied responsive free theme option.
 function responsive_free_get_option( $option, $default = false ) {
 	global $responsive_options;
@@ -1213,9 +1214,12 @@ function my_deregister_heartbeat() {
 	if ( 'post.php' != $pagenow && 'post-new.php' != $pagenow )
 		wp_deregister_script('heartbeat');
 }
-function i_print( $object ){
-	echo '<pre>'; print_r( $object ); echo '</pre>';
+if( !function_exists( i_print ) ) {
+	function i_print( $object ){
+		echo '<pre>'; print_r( $object ); echo '</pre>';
+	}
 }
+
 
 
 
